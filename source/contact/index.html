@@ -1,0 +1,38 @@
+---
+title: Contact
+date: 2018-06-12 21:02:17
+layout:  post
+thumbnail: './contact-header.jpg'
+---
+
+<p>Hey!, want to get in touch with me? <br/>For work or beers? Do you have a philosofical question, or just disagree with some of my posts? Fill out the form below to send me a message and I will try to get it back!</p>
+
+<form action="//formspree.io/mictian.public@gmail.com" method="POST" class="mui-form">
+	<div class="row control-group">
+		<label style='display:none'>Name</label>
+		<div class="mui-textfield">
+			<input type="text" placeholder="Name" name="name" required data-validation-required-message="Please enter your name.">
+		</div>
+	</div>
+
+	<div class="row control-group">
+		<label style='display:none'>Email Address</label>
+		<div class="mui-textfield" >
+			<input type="email" name="_replyto" placeholder="Email Address" required data-validation-required-message="Please enter your email address.">
+		</div>
+	</div>
+
+	<div class="row control-group">
+		<label style='display:none'>Message</label>
+		<div class="mui-textfield">
+			<textarea rows="5" placeholder="Message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+		</div>
+	</div>
+
+	<input type="text" name="_gotcha" style="display:none" />
+
+	<div class="row submit-btn-container">
+		<input type="submit" class="mui-btn mui-btn--raised" value="Send">
+	</div>
+
+</form>

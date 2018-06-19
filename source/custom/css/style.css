@@ -1,0 +1,25 @@
+
+aside#sidebar {
+	background-color: black;
+}
+
+.sidebar-colored .sidebar-nav li > a {
+	color: white ;
+}
+
+.sidebar-colored .sidebar-nav a.sidebar_archives-link {
+	color: black !important;
+}
+
+.sidebar-colored button.sidebar-toggle {
+	color: red;
+}
+
+.sidebar-colored .sidebar-brand,
+.sidebar-colored .sidebar-brand:hover {
+	color: black;
+}
+
+a.toTop {
+	background-color: black !important;
+}
