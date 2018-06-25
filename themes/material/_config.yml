@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Head info
-head: 
+head:
     favicon: "/img/favicon.png"
     high_res_favicon: "/img/favicon.png"
     apple_touch_icon: "/img/favicon.png"
@@ -18,9 +18,9 @@ head:
 
 # Jump Links Settings
 url:
-    rss:
-    daily_pic: "#"
-    logo: "#"
+    rss: /atom.xml
+    daily_pic: "/contact"
+    logo: "/about"
 
 
 # ---------------------------------------------------------------
@@ -33,11 +33,13 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
-    theme_color: "#0097A7"
+    slogan: "Hi, welcome to another blog to discuss about software development"
+    # theme_color: "#0097A7"
+    theme_color: "#000000"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
-    button_color: "#757575"
+    # button_color: "#757575"
+    button_color: "#FFFFFF"
     android_chrome_color: "#0097A7"
     nprogress_color: "#29d"
     nprogress_buffer: "800"
@@ -62,7 +64,8 @@ thumbnail:
 #        color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    purecolor: "#F5F5F5"
+    purecolor: "#4a4a4a"
+    # purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
     bing:
         enable: false
@@ -70,10 +73,10 @@ background:
 
 # Images Settings
 img:
-    logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
+    logo: "/about/mictian-logo.png"
+    avatar: "/custom/img/avatar.png"
+    daily_pic: "/contact/home-contact-link.png"
+    sidebar_header: "/about/mictian-logo-sidebar.png"
     random_thumbnail: "/img/random/material-"
     footer_image:
         #upyun_logo:
@@ -98,7 +101,7 @@ card_elevation: 2
 # Copyright
 # Specify the date when the site was setup.
 #    For example, if you set it as 2015, then footer will show '© 2015 - 2017'
-copyright_since:
+copyright_since: 2015
 
 # Footer Text
 # You can specify the text you want to show in footer, HTML tag is supported.
@@ -135,14 +138,14 @@ hanabi:
     enable: false
     line_number: true
     includeDefaultColors: true
-    customColors: 
+    customColors:
 
 # Post License
 # You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
 #   For example, you can setup a CC license as:
 #       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
 # You can also use Front-Matter `license` to override this setting.
-license: 
+license:
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -157,15 +160,16 @@ toc:
 
 # SNS Menu
 sns:
-    email: youremail@email.com
-    facebook: "https://www.facebook.com/facebook"
-    twitter: "https://twitter.com/twitter"
-    googleplus: "https://www.google.com/"
+    email: mictian.public@gmail.com
+    facebook: 
+    twitter: 
+    googleplus:
     weibo:
     instagram:
     tumblr:
-    github:
-    linkedin:
+    github:  https://github.com/mictian
+    linkedin: https://www.linkedin.com/in/santiagomachado/uy
+    rss: /atom.xml
     zhihu:
     bilibili:
     telegram:
@@ -174,10 +178,10 @@ sns:
 # SNS Share Switch
 sns_share:
     twitter: true
-    facebook: true
+    facebook: false
     googleplus: true
-    weibo: true
-    linkedin: false
+    weibo: false
+    linkedin: true
     qq: false
     telegram: false
 
@@ -185,8 +189,9 @@ sns_share:
 sidebar:
     dropdown:
         Email Me:
-            link: "#"
+            link: "/contact"
             icon: email
+            target: _self
     homepage:
         use: true
         icon: home
@@ -200,10 +205,10 @@ sidebar:
         icon: chrome_reader_mode
         divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        About:
+            link: "/about"
+            icon: person
+            divider: false
     article_num:
         use: false
         divider: false
@@ -225,16 +230,16 @@ sidebar:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret form https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key form https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use: 
-    shortname: # duoshuo or disqus shortname
+    use: disqus
+    shortname: mictianio # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
     livere_data_uid:
     gitment_repo:   # git repo of the hexo
     gitment_owner:  # git repo's owner
-    gitment_client_id:  # github app client id 
-    gitment_client_secret :  # github app client secret 
+    gitment_client_id:  # github app client id
+    gitment_client_secret :  # github app client secret
     valine_leancloud_appId:  # leancloud application app id
     valine_leancloud_appKey:  # leancloud application app key
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
@@ -246,14 +251,14 @@ comment:
     valine_guest_info: nick,mail,link #valine comment header info
     gitalk_repo: # git repo of the hexo
     gitalk_owner: # git repo's owner
-    gitalk_client_id: # github app client id 
+    gitalk_client_id: # github app client id
     gitalk_client_secret: # github app client secret
 
 # Search Systems
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key:
 
 # Analytics Systems
