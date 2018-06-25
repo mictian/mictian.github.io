@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            A possible architecture with Backbone | 
+        
+        Mictian Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Another blog to discuss about software and stuff">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?zwuvHoVGMXAuUaolLVFNig==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #000000 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #000000 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #000000 !important;
+  }
+
+  .toTop {
+    background: #FFFFFF !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #FFFFFF;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #FFFFFF;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #FFFFFF;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #4a4a4a;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Mictian Blog">
+    <meta name="msapplication-starturl" content="https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mictian Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="/atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="A possible architecture with Backbone | Mictian Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Another blog to discuss about software and stuff">
+    
+
+    
+        <meta property="article:published_time" content="Wed Jan 27 2016 12:00:00 GMT+0100">
+        <meta property="article:modified_time" content="Mon Jun 25 2018 20:01:00 GMT+0200">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/index.html",
+    "headline": "A possible architecture with Backbone",
+    "datePublished": "Wed Jan 27 2016 12:00:00 GMT+0100",
+    "dateModified": "Mon Jun 25 2018 20:01:00 GMT+0200",
+    "author": {
+        "@type": "Person",
+        "name": "Mictian",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/custom/img/avatar.png"
+        },
+        "description": "Hi, welcome to another blog to discuss about software development"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mictian Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "Another blog to discuss about software and stuff",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+        
+            <link rel='stylesheet' type='text/css' href='/contact/mui.min.css' /> <link rel='stylesheet' type='text/css' href='/custom/css/style.css' /> <script type='text/javascript' src='/custom/js/script.js' ></script>
+        
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#section"><span class="post-toc-number">1.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#introduction"><span class="post-toc-number">2.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vision-aim"><span class="post-toc-number">3.</span> <span class="post-toc-text">Vision, Aim</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#content"><span class="post-toc-number">4.</span> <span class="post-toc-text">Content</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#what-they-are"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">What they are?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#why"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">Why?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#template"><span class="post-toc-number">4.1.3.</span> <span class="post-toc-text">Template</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview"><span class="post-toc-number">4.1.3.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose"><span class="post-toc-number">4.1.3.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-1"><span class="post-toc-number">4.1.3.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits"><span class="post-toc-number">4.1.3.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility"><span class="post-toc-number">4.1.3.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples"><span class="post-toc-number">4.1.3.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#application-definition"><span class="post-toc-number">5.</span> <span class="post-toc-text">Application Definition</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-1"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#team-application-definition-contract"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">Team-Application Definition Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-1"><span class="post-toc-number">5.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-1"><span class="post-toc-number">5.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-2"><span class="post-toc-number">5.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-1"><span class="post-toc-number">5.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-1"><span class="post-toc-number">5.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-1"><span class="post-toc-number">5.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#modules"><span class="post-toc-number">6.</span> <span class="post-toc-text">Modules</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-1"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-1"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-2"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module-definition-unit-contract"><span class="post-toc-number">6.3.1.</span> <span class="post-toc-text">Module-Definition-Unit Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-2"><span class="post-toc-number">6.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-2"><span class="post-toc-number">6.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-3"><span class="post-toc-number">6.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-2"><span class="post-toc-number">6.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-2"><span class="post-toc-number">6.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-2"><span class="post-toc-number">6.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module-definition-dependencies-contract"><span class="post-toc-number">6.3.2.</span> <span class="post-toc-text">Module-Definition-Dependencies Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-3"><span class="post-toc-number">6.3.2.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-3"><span class="post-toc-number">6.3.2.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-4"><span class="post-toc-number">6.3.2.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#side-effects"><span class="post-toc-number">6.3.2.4.</span> <span class="post-toc-text">Side Effects</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-3"><span class="post-toc-number">6.3.2.5.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-3"><span class="post-toc-number">6.3.2.6.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-3"><span class="post-toc-number">6.3.2.7.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#section-1"><span class="post-toc-number">6.3.3.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module-application-interaction-contract"><span class="post-toc-number">6.3.4.</span> <span class="post-toc-text">Module-Application-Interaction Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-4"><span class="post-toc-number">6.3.4.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-4"><span class="post-toc-number">6.3.4.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-5"><span class="post-toc-number">6.3.4.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-4"><span class="post-toc-number">6.3.4.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-4"><span class="post-toc-number">6.3.4.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-4"><span class="post-toc-number">6.3.4.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#views"><span class="post-toc-number">7.</span> <span class="post-toc-text">Views</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-2"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-2"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-3"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#view-template-contract"><span class="post-toc-number">7.3.1.</span> <span class="post-toc-text">View-Template Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-5"><span class="post-toc-number">7.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-5"><span class="post-toc-number">7.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-6"><span class="post-toc-number">7.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-5"><span class="post-toc-number">7.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-5"><span class="post-toc-number">7.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-5"><span class="post-toc-number">7.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#view-store-contract"><span class="post-toc-number">7.3.2.</span> <span class="post-toc-text">View-Store Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-6"><span class="post-toc-number">7.3.2.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-6"><span class="post-toc-number">7.3.2.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-7"><span class="post-toc-number">7.3.2.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-6"><span class="post-toc-number">7.3.2.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-6"><span class="post-toc-number">7.3.2.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-6"><span class="post-toc-number">7.3.2.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#view-child-views-contract"><span class="post-toc-number">7.3.3.</span> <span class="post-toc-text">View-Child-Views Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-7"><span class="post-toc-number">7.3.3.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-7"><span class="post-toc-number">7.3.3.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-8"><span class="post-toc-number">7.3.3.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-7"><span class="post-toc-number">7.3.3.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-7"><span class="post-toc-number">7.3.3.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-7"><span class="post-toc-number">7.3.3.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#stores"><span class="post-toc-number">8.</span> <span class="post-toc-text">Stores</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-3"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-3"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-4"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#client-store-contract"><span class="post-toc-number">8.3.1.</span> <span class="post-toc-text">Client-Store Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-8"><span class="post-toc-number">8.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-8"><span class="post-toc-number">8.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-9"><span class="post-toc-number">8.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-8"><span class="post-toc-number">8.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-8"><span class="post-toc-number">8.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-8"><span class="post-toc-number">8.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#store-factory-contract"><span class="post-toc-number">8.3.2.</span> <span class="post-toc-text">Store-Factory Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-9"><span class="post-toc-number">8.3.2.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-9"><span class="post-toc-number">8.3.2.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-10"><span class="post-toc-number">8.3.2.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-9"><span class="post-toc-number">8.3.2.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-9"><span class="post-toc-number">8.3.2.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-9"><span class="post-toc-number">8.3.2.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#models"><span class="post-toc-number">9.</span> <span class="post-toc-text">Models</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-4"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-4"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-5"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#model-service-contract"><span class="post-toc-number">9.3.1.</span> <span class="post-toc-text">Model-Service Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-10"><span class="post-toc-number">9.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-10"><span class="post-toc-number">9.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-11"><span class="post-toc-number">9.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-10"><span class="post-toc-number">9.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-10"><span class="post-toc-number">9.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-10"><span class="post-toc-number">9.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#code"><span class="post-toc-number">10.</span> <span class="post-toc-text">Code</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-5"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-5"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-6"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#code-code-contract"><span class="post-toc-number">10.3.1.</span> <span class="post-toc-text">Code-Code Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-11"><span class="post-toc-number">10.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-11"><span class="post-toc-number">10.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-12"><span class="post-toc-number">10.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-11"><span class="post-toc-number">10.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-11"><span class="post-toc-number">10.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-11"><span class="post-toc-number">10.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#routers"><span class="post-toc-number">11.</span> <span class="post-toc-text">Routers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#definition-6"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">Definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#components-6"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">Components</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#contracts-7"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">Contracts</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#router-navigation-contract"><span class="post-toc-number">11.3.1.</span> <span class="post-toc-text">Router-Navigation Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-12"><span class="post-toc-number">11.3.1.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-12"><span class="post-toc-number">11.3.1.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-13"><span class="post-toc-number">11.3.1.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-12"><span class="post-toc-number">11.3.1.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-12"><span class="post-toc-number">11.3.1.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-12"><span class="post-toc-number">11.3.1.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#router-view-contract"><span class="post-toc-number">11.3.2.</span> <span class="post-toc-text">Router-View Contract</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overview-13"><span class="post-toc-number">11.3.2.1.</span> <span class="post-toc-text">Overview</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#purpose-13"><span class="post-toc-number">11.3.2.2.</span> <span class="post-toc-text">Purpose</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#content-14"><span class="post-toc-number">11.3.2.3.</span> <span class="post-toc-text">Content</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#benefits-13"><span class="post-toc-number">11.3.2.4.</span> <span class="post-toc-text">Benefits</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extensibility-13"><span class="post-toc-number">11.3.2.5.</span> <span class="post-toc-text">Extensibility</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#examples-13"><span class="post-toc-number">11.3.2.6.</span> <span class="post-toc-text">Examples</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#tools"><span class="post-toc-number">12.</span> <span class="post-toc-text">Tools</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                A possible architecture with Backbone
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/custom/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Mictian</strong>
+        <span>Jan 27, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=A possible architecture with Backbone&url=https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/index.html&via=Mictian" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/index.html&title=A possible architecture with Backbone" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="section"></h1>
+<h1 id="introduction"><span id="anchor"></span>Introduction</h1>
+<p>This document try to present a solution, as generic as possible, to handle the complexity of doing Web Business Applications.</p>
+<p>As you will realize I have took lof of ideas from Marionette JS, Odata and Backbone itself. Please read about them if you feel you are missing something.</p>
+<p>In this document I try to apply the Backbone guidelines and the continuous enforcement of almost one single development principle: <strong>SOLID<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></strong>. </p>
+<p>By not mean I have all the answers, nor this proposal is perfect or I am trying to blame others. By the contrary, this is just my two cents on the construction of business apps.</p>
+<p>So please read this post not as brand new idea, but as the result of my experience working on eCommerce apps and a compendium of best practices.</p>
+<p></p>
+<h1 id="vision-aim"><span id="anchor-1"></span>Vision, Aim</h1>
+<p>As I express in the introduction my aim is define a technical overview for business apps. Define a code structure that is flexible enough for the current state of the market, where every single line of code written adds value, where the amount of refactor (a huge problem is in big companies) is minimum.</p>
+<p>I see a code base where A/B testing is something easy and natural, where code can be added and removed by safely editing a package.json file, where new teams can be created and use the code without any worries at all.</p>
+<p>My vision is a code that evolves, where the complexity is per module and related with business aspect exclusively.</p>
+<p></p>
+<h1 id="content"><span id="anchor-2"></span>Content</h1>
+<p>I think that the root of the complexity is in the interaction among agent and the understanding of each of them inside an application. For this reason the current document is organized around each agent in our code base, putting the focus on the client side.<br>
+Besides, for each of them a definition and a list of contracts is provided.<br>
+Any interaction outside the ones defined here will be prohibited.</p>
+
+<p>Note: I assume the existence of an underlying framework that provide basic functionality on top of backbone. But don’t worry, it will only provide generic features and those will be described in this document.</p>
+<h2 id="contracts"><span id="anchor-4"></span>Contracts</h2>
+<p>As one of the most important points to model complexity is a clear definition of the valid interaction, each of them will be defined through a concise template.</p>
+<h3 id="what-they-are"><span id="anchor-5"></span>What they are?</h3>
+<p>Each contract define the valid interface in which each component/agent can be used.</p>
+<h3 id="why"><span id="anchor-6"></span>Why?</h3>
+<p>As business application tend to be big code bases with lot of developers, when the clear the aim of each agent the easier it will be to add new feature to the code.</p>
+<h3 id="template"><span id="anchor-7"></span>Template</h3>
+<h4 id="overview"><span id="anchor-8"></span>Overview</h4>
+<p>This section provides a brief idea of that the contract is about.</p>
+<h4 id="purpose"><span id="anchor-9"></span>Purpose</h4>
+<p>A list of the aims pursued by the contract.</p>
+<h4 id="content-1"><span id="anchor-10"></span>Content</h4>
+<p>This is the main section of the contract where the interaction is described.</p>
+<h4 id="benefits"><span id="anchor-11"></span>Benefits</h4>
+<p>List of the benefits gained after applying the proposed rule. This allow to have a better judgment of the value of the contract.</p>
+<h4 id="extensibility"><span id="anchor-12"></span>Extensibility</h4>
+<p>Independently what kind of application we are building we need to plan for the unknown, for the evolution of our code.</p>
+<h4 id="examples"><span id="anchor-13"></span>Examples</h4>
+<p>In order to evacuate any possible doubt all contract provide an example of applicability.</p>
+<p></p>
+<h1 id="application-definition"><span id="anchor-14"></span>Application Definition</h1>
+<h2 id="definition"><span id="anchor-15"></span>Definition</h2>
+<p>This is the only none-technical contract in the entire post. Nevertheless it is not less important, as it set the mind set that all developer must have when facing a new feature.</p>
+<p>Through the pass of the time the conception of business apps have changed, from simple applications that fulfill small requirements to complex frameworks.</p>
+<p>Part of the reason why business apps are so complex is because market is complex, and the need to improve ROI is constant. Having defined what all stakeholder expect from the app is really important. Should we develop the as if it will be used by other teams? Are there Manager interested in creating a framework from this project? How much the team involved is expected to grow?</p>
+<p>As a developer you must think that the code you are producing will always be extended and used by someone else to create something that you have not idea.</p>
+<h2 id="components"><span id="anchor-16"></span>Components</h2>
+<p>Any big application posses lot of component, but for the sake of simplicity let mention the following:</p>
+<ul>
+<li><strong>Code base</strong>: All your code.</li>
+<li><strong>Developers</strong>: We as authors and customizers of this code bases are part of it, and assuming it will give us the needed vision to work.</li>
+</ul>
+<p></p>
+<h2 id="contracts-1"><span id="anchor-17"></span>Contracts</h2>
+<h3 id="team-application-definition-contract"><span id="anchor-18"></span>Team-Application Definition Contract</h3>
+<h4 id="overview-1"><span id="anchor-19"></span>Overview</h4>
+<p>This contract formalize and synthesize the responsibilities and the goal every developer must understand in order to develop in the app.</p>
+<h4 id="purpose-1"><span id="anchor-20"></span>Purpose</h4>
+<ul>
+<li>Define the mind set every person that edit the code needs to have.</li>
+</ul>
+<h4 id="content-2"><span id="anchor-21"></span>Content</h4>
+<p>Believe it or not your code is many things, from a future framework to a customer facing application.</p>
+<p>This translate to the fact that every class you made will be for sure ran under unplanned context. From different browsers to different aim and usages. Lot of our code base is reused by other teams, from in-company to third parties and who knows what more.</p>
+<p>On the other hand, the final reason why you are developing is to delivery a functional application that provide value/features for final customers.</p>
+<p>All these conditions makes from any business app a complex scenario hard to model. There is no golden guide to rule them all, so at the end of the day will be the developer who decide which is the best way to create something.</p>
+<p>My humble help is this, we need to think of our work as the fulfillment of a contract with the rest of the consumer of our code.</p>
+<h4 id="benefits-1"><span id="anchor-22"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>More aspect will start to be configurable.</li>
+<li>Communication will be easy as all the team will be in the same page.</li>
+<li>People will regularly start to be more careful about code editions.</li>
+</ol>
+<h4 id="extensibility-1"><span id="anchor-23"></span>Extensibility</h4>
+<p>When the expected result is clear new teams can be created easily than when the only aim is create new features.</p>
+<h4 id="examples-1"><span id="anchor-24"></span>Examples</h4>
+<p>N/A.</p>
+<p></p>
+<h1 id="modules"><span id="anchor-25"></span>Modules</h1>
+<h2 id="definition-1"><span id="anchor-26"></span>Definition</h2>
+<p>Having an excellent understand of what a module is, is more than essential, as they are our main unit of work. (At least in this post). In other word, is the definition itself what ends up being the contract to interact with modules.</p>
+<p></p>
+<p><em>RAE</em>: “<em>Piece or unitary group of pieces that are used repetitively to build a thing</em>”</p>
+<p><em>Wikipedia</em>: “<em>Modular programming is a software design technique that emphasizes separating the functionality of a program into independent, interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality</em>”</p>
+<p></p>
+<p>From my personal perspective, a module defines as a group of asset that work together to achieve <strong>one</strong> single requirement. They represent our unit of “work”, encapsulating and abstracting away all its internal implementation details.<br>
+When defining what a module does you must be able to do this without using any linkers at all.</p>
+<p></p>
+<h2 id="components-1"><span id="anchor-27"></span>Components</h2>
+<p>Based on our previous definition, every component needed to fulfill the module's aim, apart from the framework, is part of the module. Some examples can be:</p>
+<ul>
+<li>Configuration</li>
+<li>JavaScript: Views, Routers, Module, Stores, Utilities classes, Services &amp; Backend Models</li>
+<li>Assets: Images, Fonts, translations, etc</li>
+</ul>
+<p></p>
+<p>Although this definition is correct, it is incomplete. In the same way certain files depend on other files inside a module, some modules depend on other modules.</p>
+<p>Another point to consider is the relation between a module and the framework. Even that we are the creators of our app this relation and dependency must be clearly defined and used. Independently of what dependency manager do you use, AMD, CommonJS or whatever.</p>
+<p></p>
+<h2 id="contracts-2"><span id="anchor-28"></span>Contracts</h2>
+<p>The following list is mainly advocated to formalize what a module is. For this reason there are extremely related to each other. They could even be one single contract but to be more understandable they are divided into 3 related aspects.</p>
+<p>Before analyzing these contracts, we should see how the industry is handling this issue. One excellent example that solve almost all the problems we are facing is npm, so I base many ideas expressed here on this project.</p>
+<p></p>
+<h3 id="module-definition-unit-contract"><span id="anchor-29"></span>Module-Definition-Unit Contract</h3>
+<h4 id="overview-2"><span id="anchor-30"></span>Overview</h4>
+<p>If you agree that you will divide all your app into modules, there can not exist anything else than modules. No special modules that are actually mini-apps nor anything like that.</p>
+<h4 id="purpose-2"><span id="anchor-31"></span>Purpose</h4>
+<ul>
+<li>Respect and honor the definition of module.</li>
+<li>Reduce the needs to apply cross-modules hacks.</li>
+</ul>
+<h4 id="content-3"><span id="anchor-32"></span>Content</h4>
+<p>In one single sentence: </p>
+<p>Everything that belong to a module must be inside that module &amp; everything is a module.</p>
+<p>Deducing from the module definition all assets that directly helps the module to fulfill the it's aim, must be part of the module.<br>
+Give a definition to know if certain assets <em>directly</em> help a module or not, that works in all cases, is extremely hard and in practically unnecessary.</p>
+<p>In other words, I consider each module as a require code to implement one feature, considering backend and frontend assets.</p>
+<p>In order to have a good understanding in this area next I will analyzing some of the most important assets.</p>
+<p><strong>Module's configuration</strong> must be located inside the each module. If there are components that are located outside a module, it is totally impossible to use such module in any other context without replicate its configuration. (Believe me, all big companies fails on this)</p>
+<p>In the majority of the cases modules should only access its own configuration. It does not have too much sense that a module need read/write the configuration of other module. Although there are exceptions like cross-module configurations that can be helpful to reduce duplicate code, even in this case this configuration must be in one single place, in the application configuration.</p>
+<p>There are scenarios that can seem confusing at fist, for instance those modules that handle the user preferences. This one seems to be an exception of the previous statement. But in fact, modules likes this are just like any other module, it brings information from back-end and expose it in the client side. So if a module need to access this information you have to declare a dependency from one module to another (please see next contract for a reference on inter-modules dependency management).</p>
+<p>In this section we didn’t define what a <em>configuration</em> is, anyway for the sake of simplicity I consider ONLY JSON<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> data to be valid configuration.</p>
+<p>Bootstrapping information is a common task to retrieve information and configuration from the back-end at the load time. Again <em>what</em> and <em>how</em> is exposed are decisions that must be taken by the module and be specified inside the module boundaries. Of course, supported by a generic functionality provided by the underlying framework (in this case I am of your code, not Backbone not anything else).</p>
+<p>Do not use global variableslike <em>MyCompany.ENVIRONMENT </em>inside modules.<br>
+In some scenarios you can use them to load multiples back-end configs, but in any case remember that this is a task performed by the underlying framework to optimize load time..</p>
+<p>Based on the previous aspect each module will be able to specify a front-end and back-end configuration, and now, with this points, a way to bootstrap back-end information.<br>
+Notice the different between configuration and information, with the latter, information, we can be retrieve the result of any computation in the back-end.s</p>
+<p><strong>Module's composition files and the units of composition to create. </strong>We claim that our application is composed by using multiples modules together.<br>
+In other words, exclusively only when you are working inside a module or adding a new feature, you can refer to files inside a module.</p>
+<p>Consequences of this are simple, we continue needing to concatenate front-end and back-end files, so instead of grabbing files inside modules, we should ask each module what assets need to be concatenated in the back-end and in the front-end.</p>
+<p>If we see npm, each node package specify <em>main </em>property that points to the file that represent the entry point of the module.</p>
+<p>In our case we will need to specify: </p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Front-end entry point: </strong>As specified by npm with a main entry is an excellent idea.<br>
+Besides we will require that from that file all its internal dependencies can be computed so we can generate the tree of files that will take part of the front-end code.<br>
+</li>
+<li><strong>Back-end entry point:</strong> Currently this is not in part of npm, so I propose again making this convention explicit by defining a <em>backEndMain</em> property in the package.json file of the module.<br>
+</li>
+<li><strong>Front-end configuration: </strong>This is again a new concept. A file which only has JSON data that is being pointed by the property <em>configuration</em> of the package.json file.<br>
+The underlying framework will be responsible for loading this file and send it to the module through a module API (more of this on the next contract).<br>
+</li>
+<li><strong>Back-end configuration:</strong> This is the counterpart of the previous point.<br>
+</li>
+<li><strong>Back-end bootstrapping information</strong>. Although this is something you will want to handle carefully as it affect directly your loading time, is an API you will need to have explicitly. Again, another package.json property, in this case called <em>backEndBoostrapModel</em>, which will point to a back-end file with one single method, <em>loadData, </em>that will be executed to bootstrap the require information.</li>
+</ol>
+<h4 id="benefits-2"><span id="anchor-33"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Real modularity in our code base.</li>
+<li>The mechanism to add or remove what data is boostrapper will be module-agnostic.</li>
+<li>The use of the global variable must be occasional and well justified.</li>
+<li>There wont exist computation (functions) on the configuration.</li>
+<li>Allows life cycles per module and not force an entire release of all your application.</li>
+<li>Configuration will be safe to edit.</li>
+<li>Configuration will be serialized safety and thanks to this new visual editor can be created on top of this.</li>
+<li>Creators/Customizers of modules wont be require to know how the framework work in order to bootstrap information or edit the configuration of a module.</li>
+<li>Any file inside a module can be edited without affecting others.</li>
+</ol>
+<h4 id="extensibility-2"><span id="anchor-34"></span>Extensibility</h4>
+<p>As module's assets are simple files, extend a module is just a matter of adding a new file to it.</p>
+<h4 id="examples-2"><span id="anchor-35"></span>Examples</h4>
+<p>Modules as unit of composition can be seen more clearly when we contrast them with files as unit of composition. If we use files, it does not make any sense to have them grouped in folder, by just prefixed them with the functionality they are related would be enough. In this case our code base would be a big list of files where some of them start it name, let say, “Address” other with “CreditCard”, and we can after the functionality add another prefix to indicate if it is front or back-end logic, so a sample file could be: Address.Front.Details.View.js.</p>
+<p></p>
+<h3 id="module-definition-dependencies-contract"><span id="anchor-36"></span>Module-Definition-Dependencies Contract</h3>
+<h4 id="overview-3"><span id="anchor-37"></span>Overview</h4>
+<p>This contract try to formalize what are the parts of a module and what is needed for a module to fulfill its purpose. All the points treated in this contract are direct consequence of the module definition.</p>
+<h4 id="purpose-3"><span id="anchor-38"></span>Purpose</h4>
+<ul>
+<li>Enforce our Module's definition.</li>
+<li>Allow real modularity in our code.</li>
+<li>Reduce unexpected side effect when editing a module.</li>
+<li>Release developers from the requirement of knowing how the entire application works in order to understand a single piece of the code.</li>
+<li>Permit adding and removing modules, for instance to make A/B Testing, in an extremely simple way.</li>
+</ul>
+<h4 id="content-4"><span id="anchor-39"></span>Content</h4>
+<p>This section model how modules handle to express dependencies. There are two main points regarding dependencies that we need to define; Given a module WHAT are its dependencies, and given a module HOW to know what exports.</p>
+<p><strong>What </strong>are the dependencies of a module should be defined in the <strong>package.json</strong> file.</p>
+<p>It is of <strong>paramount importance to notice the different kind of dependencies modules can have</strong>:</p>
+<ul>
+<li><em>Mandatory Dependencies</em>: When a module, in order to achieve its aim, needs from another module, a mandatory dependency is created.<br>
+For example: the module Checkout.Shipping.Address has a mandatory dependency with the module Address, because if the latter is not present the former by no means will be able to accomplish anything.<br>
+<strong>As it is predicable, this kind of dependencies are the less common</strong> in the context of <em>feature modules.</em> This is a consequence of our initial definition of a module. One module must provide only one functionality.<br>
+<br>
+<em>Notes</em>: All feature used from the underlying framework must be treated as ordinary modules regarding to dependency management. Having global will significantly increase the coupling of the final application. Besides this would mean that there are more than one way to handle dependencies, which is the aim at all. (so no global $ nor jQuery)<br>
+</li>
+<li><em>Optional Dependencies</em>: Almost all of dependencies that a module has falls in this section. I recommend this so when a module is not present you application will continue working.<br>
+For example: The main PDP View must optionally depends on the Cart Model. If it is present in the application the 'Add to Cart' button will be visible in the view, but if not (perhaps the current application is only a read-only catalog) the PDP must continue working.</li>
+</ul>
+<p>As we base or modules on npm we should us the property <em>dependencies </em>for mandatory dependencies and <em>optionalDependencies</em> for optional dependencies.</p>
+<h4 id="side-effects"><span id="anchor-40"></span>Side Effects</h4>
+<ul>
+<li>One peculiar side effect is at a View level, composite Views will start supporting null as a child view, as there could be the cases where an optional dependency is not meet.</li>
+</ul>
+<h4 id="benefits-3"><span id="anchor-41"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>It wont be allowed to require other files outside the module.</li>
+<li>As backbone already provide mechanism to access current view, there wont we any reason to require jQuery. So no module will use jQuery by itself at all.</li>
+<li>Allows life cycles per module and not force an entire release of all the application.</li>
+<li>Based on npm with a touch of “Universal” JS.</li>
+</ol>
+<h4 id="extensibility-3"><span id="anchor-42"></span>Extensibility</h4>
+<p>As we have defined all the dependencies on properties of the package.json file by just editing this file we will be adding or removing any dependency.</p>
+<h4 id="examples-3"><span id="anchor-43"></span>Examples</h4>
+<p>An imaginary module 'Transaction Searcher' module will depend optionally on Deposit Application, Credit Memo and Payment, as these module can or cannot be present in the current application and this does not means that the Transaction Searcher is not able to accomplish its aim.</p>
+<h3 id="section-1"></h3>
+<h3 id="module-application-interaction-contract"><span id="anchor-44"></span>Module-Application-Interaction Contract</h3>
+<h4 id="overview-4"><span id="anchor-45"></span>Overview</h4>
+<p>This contract defines how to access other modules information and how the interaction between a module and the application must be.</p>
+<p>This can be seen just as a study case where I apply the Dependency Injection pattern in the context of a business apps.</p>
+<h4 id="purpose-4"><span id="anchor-46"></span>Purpose</h4>
+<ul>
+<li>Allow modules to interact with each other.</li>
+<li>Allow composition on module's functionality.</li>
+<li>Allow modules to access Application services.</li>
+<li>Allow module to exports functionality in a context agnostic way.</li>
+</ul>
+<h4 id="content-5"><span id="anchor-47"></span>Content</h4>
+<p>It is useless to define all the dependencies and components a module has if there is not way to access them.</p>
+<p>If our composition unit is the module it has not sense to require individual files, we must interact with a module. In other words, every module must publicly expose the API to interact with it.</p>
+<p>I can see two aspect in this contract.</p>
+<p><strong>Exporting or exposing internal module components and information</strong>. Fortunately we can use the mechanism that npm provides. The only consideration, in case of using module.export, will be using Browserify or any other transpiler to run your code on the browser.<br>
+Anyway, you will need a mechanism to communicate modules with the application. We will define a mounting process, in which modules are called to be mounted into the current application. An initialization process but at the module level. We will implements this by calling a pre-defined function (lets call it <em>startUp) </em>in the backend and frontend file entry point. Which means that some information is passed from the application to the module and some information is retrieved from the module.</p>
+<p>It will be responsibility of the module to return an object (the facade of the module) that allows interact with it. This object, the module's API, must be totally documented.<br>
+The tradeoff in this case will be not expose internal implementation details, but offer a rich interface to interact with the module.</p>
+<p><strong>Access dependencies information</strong>. When the <em>startUp</em> function is called two parameters must be passed, the application instance and an object with the dependencies specified in the package.json. It will be the responsibility of the module's entry point to preserve this object so inner components of the module will access them too.<br>
+This second object will have a property for each module's dependencies, where the name of these properties will be the same as the name of the requested module.</p>
+<p>I know this may seems unnatural, why not just requiring the dependencies as in any npm module? To allow extension point during this process, allow setting default values when a module is not present, etc. Believe me, in the context of big business app you never know what will be the next feature.</p>
+<p>This information accessed wont be more than the exported interface/API of each of the require modules.</p>
+<p>In the case of optional dependencies, if they are meet, they will be accessible as any other dependency (property of the second parameter object), if it's not, the property with the module name must be set to false making explicit that the module was requested but the dependency was not meet.</p>
+<p>All the previous has as a consequence that all inter-module communication will be done through decouple mediums.</p>
+<p>When module to module communication is require, for example to indicate that an address has been created, an event through the Module's API can be thrown.</p>
+<p>Note: As event can become unmanageable I recommend name-spaced all of them in the following way:</p>
+<p>moduleName:entity:action</p>
+<p>An example could be: <em>address:addressCollection:add </em>to indicate that at item was added into the address collection of the address module.<br>
+Finally I would recommend RxJS to handle events, but we will leave for another post.</p>
+<h4 id="benefits-4"><span id="anchor-48"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Easily mocking entire modules.</li>
+<li>The edition on one module not affect other modules.</li>
+<li>Applying an entire refactor of a module, while it preserve the module's API, wont have any particular risk at all.</li>
+<li>Stability and QA coverage could be really measured per module.</li>
+</ol>
+<h4 id="extensibility-4"><span id="anchor-49"></span>Extensibility</h4>
+<p>By just passing more values in the <em>startUp</em> entry point function we can extend this interface.</p>
+<h4 id="examples-4"><span id="anchor-50"></span>Examples</h4>
+<p>This allows us to define log entry for each module that is requested but not present. Or add logging information of the inter-module communication.</p>
+<p></p>
+<h1 id="views"><span id="anchor-51"></span>Views</h1>
+<h2 id="definition-2"><span id="anchor-52"></span>Definition</h2>
+<p>Views represents the piece of code where almost all of the interaction logic is located. So model them, understand them and interact with them correctly means we are handling correctly a big portion of our application computation.<br>
+Let see some definitions of Views:</p>
+<p><em>Backbone</em>: “<em>Backbone views are almost more convention than they are code — they don't determine anything about your HTML or CSS for you, and can be used with any JavaScript templating library. The general idea is to organize your interface into logical views, backed by models, each of which can be updated independently when the model changes, without having to redraw the page. Instead of digging into a JSON object, looking up an element in the DOM, and updating the HTML by hand, you can bind your view's render function to the model's “change&quot; event — and now everywhere that model data is displayed in the UI, it is always immediately up to date</em>.”</p>
+<p>Personally I would define a view as the piece of code in charge of handling the interaction between the a user interface<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> (generally representing user requests and the output given the user, the DOM, a console or whatever) and a store<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> (state container) through the invocation of methods and listening to events in the latter.<br>
+If you agree with this definition probably the name Controller rather than View is more appropriate. Particularly if we see other framework that apply the MVC pattern.</p>
+<p></p>
+<h2 id="components-2"><span id="anchor-53"></span>Components</h2>
+<p>From the above definition we can observe that a View only knows about a generic user interface and a state container – Store from now on. </p>
+<ul>
+<li>The generic user interface in our Views is represented by a <strong>Template</strong>. Functions that takes a context object (state) and returns a representation of it.<br>
+Templates are part of views, every view has a default template and in the majority of cases is the view that define what template it use. This not always is the case neither a rule, but is the way I recommend using views and templates.<br>
+</li>
+<li>It turns out that there are lot of cases where this simplistic interpretation of the reality is not enough to implement all business requirements without code repetition. For this reason is that views need be composed with child-views (e.x Marionette.js composite view)<br>
+In this case Views only know about those child views that helps the principal View's purpose. Treating them in a very generic way. Please refer to the View-Child-Views Contract for more information<strong>.</strong><br>
+</li>
+<li>The <strong>Store </strong>is injected to view (Dependency Injection pattern must be used in this case). This is so because the view must directly interact with store, and in order to avoid coupling the code, this interaction must be done through the store interface.</li>
+</ul>
+<p></p>
+<h2 id="contracts-3"><span id="anchor-54"></span>Contracts</h2>
+<p>I consider the following list of contracts extremely important. Please read them all in a consciously way.</p>
+<h3 id="view-template-contract"><span id="anchor-55"></span>View-Template Contract</h3>
+<h4 id="overview-5"><span id="anchor-56"></span>Overview</h4>
+<p>This contract formalize the most important interaction you can find inside any module, the relation among Views, Templates and Stores. How and what data is shown into the user interface for the final data consumer.</p>
+<h4 id="purpose-5"><span id="anchor-57"></span>Purpose</h4>
+<ul>
+<li>Leave totally clear how developer must handle the View-Template interaction.</li>
+<li>Define the information flow to write into the user interface.</li>
+<li>Define the information flow to read from the user interface.</li>
+<li>Draw the basic structure of a generic Views.</li>
+</ul>
+<h4 id="content-6"><span id="anchor-58"></span>Content</h4>
+<p>Previous definition of Views focus on what Views are, but not explicit mention on how this interactions are done. For this we will say that a View determines WHAT content is shown and the Template determines WHERE and HOW it is shown.<br>
+In this case <em>what</em>, for example, can be what properties of the current user are shown, <em>where </em>indicate in what location it must be presented and <em>how </em>refers to the style applied to it.</p>
+<p><strong>This means that for each responsibility there is only one agent in charge of it</strong>.</p>
+<p>As in this contract we have two components interacting, two aspect can be model.</p>
+<p>First, the flow of data from the view to a user consumable representation.</p>
+<p>For a view to show/return data must call one single method that its only responsibility is generate an output that describe the View's Store through the help of the View's Template. Just for simplicity lets call this method <em>render. </em>The returned data represent the current state of the Store (not the View's as the View do not have state).<br>
+Commonly we use an HTML string to represent this output (obtained from a template), but this MUST be totally irrelevant form the View's perspective as it wont interact with it directly. It could even be an object, a call to an external service or anything else. It will be the underlying framework that in a unified way will handle this.<br>
+On the other hand, from this string other intermediate representations can be generated to update/interact with the final user abstraction – DOM in generally. But again, it wont be the View which will know about any existence of the DOM, as by definition the View only knows about a Store and a Template function, nothing else.</p>
+<p>In order to avoid errors and unnecessary complexity this flow should be as simple as possible (taking into account that it will be done repetitively along the application, and because it has performance implications). This flow can be represented in the following way:</p>
+<p>user interface representation = render(view.getStore(), view.template)</p>
+<p>Direct consequences of the previous statements combines sith the View's aim can generate the following pseudo rules that can help us to classify the scope of each component:</p>
+<ul>
+<li>A View is “correctly” developed if the <em>render</em> method is automatically called each time the Store change. Making almost unnecessary to think about this flow.</li>
+<li>The context in which this process take place is totally unknown for the View.</li>
+</ul>
+<p>Please notice that I have avoided the mention of particular representations, like jQuery, on purpose. jQuery is just one of many DOM abstractions.</p>
+<p>The described interaction denote that the Store is one single unit with the single responsibility of representing certain state. Inside this state I consider EVERY aspect the Template use as an input, if an accordion is expanded or collapsed is part of the Store, the name of the current user shown is part of the store, if there is an error message to show is a property of the Store, and so on. For this single purpose a simple JSON object would be sufficient. But for the sake of simplicity and for detection of changes in the Store I recommend a more elaborated object that could trigger events and track property changes.</p>
+<p>While this is correct and architecturally pure, we need to consider the kind of information we want to show. It is simple to realize that it is not the same an address street that the state of a collapsible accordion. For this reason I propose the use of a new Store object containing all the state previously expressed and in which one particular property will be the current View's Model. This give us a granular level of control over the View's State:</p>
+<ul>
+<li><em>General Store properties</em>: Here all properties that does not have a back-end counterpart will be stored.<br>
+This enable the handling of the default user interface state of any View in a generic way. For example if we want that all accordions appears collapsed based on some application-wide condition it will be just a matter of changing the Store factory.<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
+<li><em>Store's Model</em>: This is the property we are now using in Views thanks to Backbone guidelines. Now formalized to only represented back-end information. </li>
+</ul>
+<p>Notice that this is just a mechanism that pursuit a way of grouping all the state related with a View. Nothing else than my vision on this particular point.<br>
+Whereas this state is represented in one single object, the particular representation can vary.</p>
+<p>Please refer to the View-Store Contract for detailed information on that interaction.</p>
+<p>To pass this information from the view to the template I would recommend an explicit function in each View, that can be called getUserInterfaceState,<em> </em>which generate the JSON object that represent the state if the view. Please try to compute only once the result of this method, even better return the entire store or a projection of it.<br>
+This last observation not just enforce our View definition in which it must be stateless but also make extremely easy to track the View's state.</p>
+<p>It is important to note that, as each aspect has one single agent that manage it, transfer the Store from the View to the render process will be done by one single responsible. In this case the already mentioned <em>getUserInterfaceState</em> method.</p>
+<p>In this direction of the flow, from the View to the user interface, we have delineated what parts take part of it, what are the responsibilities of each of them and some points showing a possible implementation, but denoting what trigger this process is still missing.<br>
+In one sentence:</p>
+<p>The user interface must be updated each time the backing Store change.</p>
+<p>There is only one case when the View cares about this changes, and it is when it reads input from its user interface. Case in which is the view itself that will apply changes over the Store.</p>
+<p>The second aspect we can describe is reading the inputs from the template output. Lets start by pointing that the way in which these requests<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> are received should be independent of the user representation choose by the underlying framework.<br>
+Ideally we should be able to represent all request information in a way totally agnostic from the source of the input, as the only concern of the View is to update a Store. Update that will be done accordingly to the request <em>intention</em>, without knowing about the input <em>source </em>or <em>type</em>.</p>
+<p>Unfortunately, as we currently use Backbone Views, this information came in the form of jQuery event objects<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>, which are too coupled with the DOM and to jQuery itself.</p>
+<p>My intention with this mention to Backbone is not criticize it, but understand what is the cost of using it, what drawbacks it has and clearly visualize what could be a better alternative in the context of this contract.<br>
+Any refactor on this point involves extending or modify the default Backbone code, which could be beneficial from a testability perspective, but out of the scope of this proposal.</p>
+<p>Assuming we use jQuery events, we will have certain group of View methods in charge of handling requests from the user interface, let call them handler methods. These handlers has as mandatory first obligation; extract all needed information from the passed in event, making sure in this way that the effect of jQuery dies as soon as possible, only being visible in the first lines of these methods.<br>
+Even for this cases, Views must not access jQuery directly, only through the View's property $, and only to extract the request properties needed to understand the intention of it.</p>
+<p>After this first step is done, handlers will call inner View methods to apply any needed transformation on the recollected input and finally update the Store. In other words, Views only handle the interaction between a user interface and a Store.</p>
+<p>It is not a mistake missing to mention neither Templates nor the render flow. Because the process to update the user representation will be triggered when the Store change, without considering who change it. Because of this, the definition (or binding) of “<em>when the X property of the Store change make a render</em>” must be located in one single place/method in the View. I would say in a method called <em>bindEventsOn</em>, executed in the initialization process or when the state of the View is totally formed.<br>
+Take in mind that one of the goals of this method is allow the developer to be able to forget to call the <em>render </em>method.</p>
+<p>It is hard to define what are the responsibilities of these handlers in a deterministic and concrete way. So let simply agree on the following heuristic:</p>
+<p>View handler methods are simple input transformers where its only knowledge is the existence of an input request and an output modification on a Store object.</p>
+<p>Consider reading View-Store Contract for more clarification if needed.</p>
+<p>Inside this aspect it is important to point the execution order of these eventHanlder methods. From the View angle all event handlers must execute synchronously. Although this seems just the opposite we want to achieve, as View are so related with the user interface, this is correct.<br>
+The reason of this is because side effects wont be handle by Views. In order words, if an action require a XHR call, this will be done by the Store (backbone model) and not the View. And if the View is re-rendered during the XHR being processed, the Store will be responsible to have some property to indicate that is prepossessing, so when the View renders will indicate it.</p>
+<p><strong>Final join</strong>. For the two aspects to work as expected one union point is missing. The Template generate HTML that allow users to interact with, and the View has event handlers to process inputs. But in no point the View indicate to the Template what thing can handle.</p>
+<p>For this, the recommendation is that the View in the <em>getUserInterfaceState</em> method also return the list of selectors that can handle. Thereby the Template can change to locate an event trigger element from one place to another.</p>
+<p></p>
+<p>Finally, a part from this two main aspect I can visualize 2 more miscellaneous considerations.</p>
+<p>The name convention that standardize each of the previous mentioned points. The easier to read the code and the more information we can provide in the more consistent way the better. This relieve the developer to innovate with fancy names and overblown ways to split View methods.<br>
+My proposal on this:</p>
+<ul>
+<li><em>bindEventsOn: </em>Only View's method responsible to bind Store events with View render method.</li>
+<li><em>bindEventsOff:</em> Counterpart of the previous method to unbind events. A good alternative can be one single method called <em>bindEvents </em>that accepts a Boolean parameter indicating if must bind or unbind from Store's events.</li>
+<li>xXXXHandler: All method that are event handlers (these are the ones pointed by the events property of Backbone itself). Example: <em>addToCartHandler.</em></li>
+</ul>
+<p>For more details over name conventions and standardization over classes names, please read Code-Code contract.</p>
+<p><strong>State Lifecycle</strong> is another aspect that need to be mention. Please notice that in this contract there is not reference to when or how Store are created or initialized, this is on purpose as the View is not responsible for such a task. From the View perspective Stores will exist and share the same lifecycle as the View that contain it.</p>
+<h4 id="benefits-5"><span id="anchor-59"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>If we decide to change how our application is being rendered it will be just a matter of changing the user interface used for our templates. For example start using Virtual-DOM, JSX or any other representation of the View state.</li>
+<li>Testability will easier but not complete until jQuery events gets replaced.</li>
+<li>Views are not allowed the access outside its own $el. Because Views MUST NOT know any existence of a DOM or any other concrete browser interface. Even access its own <em>$el</em> should be an exceptional action. This make the View more easy to update.</li>
+<li>The use of jQuery must be reduce as much as possible on Views.</li>
+<li>Tracking changes and debugging errors could be extremely simple and even automated. It would be just a matter of tracing Store changes events. </li>
+<li>Changing a View' State wont require to know how it is implemented or works.</li>
+<li>Enable the handling of the default user interface state of any View in a generic way.</li>
+<li>Views will be light and decoupled of Stores increasing testability and reuse of code.</li>
+</ol>
+<h4 id="extensibility-5"><span id="anchor-60"></span>Extensibility</h4>
+<p>As this interface will so used along our applications, the extensibility point is particularly important.</p>
+<p>I will present a use case as a guide to explain how this interface must be extended. Before you read please notice that could be some parts that are not strictly part of the current interface but do are related with.</p>
+<p>The example is: How to add a new Widget into the home view.</p>
+<p>The first thing to understand is what our widget really is and what it need.<br>
+Our widget will need to render something and probably it will need to interact with the user through the rendering output. In other words, the widget will require a Template and a View.<br>
+As in any standard View and Template, the View of the widget will be responsible for handling the interaction with the Store and the user representation and the Template of the widget will be responsible for convert a Store object into a user interface. Please notice the widget is just an ordinary View and Template, and as a such must be defined a standard module.</p>
+<p>On the other hand, the first thing the customizer will do will be decide WHERE the widget will be rendered. As we have state before this is a responsibility of the Template of the Home, so in one way or another the template will be edited.<br>
+Unfortunately templates are just simple text files that does not allow the installation of plugins, the only way to extend a template is overriding it or editing it direclty.<br>
+This point indicate that we need to create an Extension Module for the Home, that will contain the overriding Template.<br>
+Knowing that we need to indicate where the widget will be added and that the widget is an ordinary View, we must specify a tag in the template to achieve this (some backbone plugins use data attributes like data-view or data-child).</p>
+<p>Although it is not describe in this document, the previous mention attribute change the standard rendering flow by searching for child views inside the View. Let define <em>childViewsContainer </em>property in the View that contains this information. This means that we will need a way extend the default value of this property to add our widget.</p>
+<p>For this all Views must provide an extensibility mechanism to add new child view without needing to override nor extend anything. It is nothing else than defining a Plugin in the View.</p>
+<p>There is not better place than the Extension Module defined to override the Template, to install this child-views plugin. I would recommend in the front-end entry point of this module.</p>
+<p>From all the previous we can conclude:</p>
+<ol style="list-style-type: decimal">
+<li>We have the widget defined in its own module. Independent of where and how it will be added in the final application. This mean that one team can add new functionality without worrying of breaking any widget.</li>
+<li>The Home module does not suffer any edition, extend or logic override, which make the customizer work safer.</li>
+<li>All the customization are placed in one place. One place to find extra logic, one place to install plugin per module, and one place to override templates.<br>
+Leaving aside the fact the template need to be overridden, everything else are benefit of this architecture.</li>
+</ol>
+<h4 id="examples-5"><span id="anchor-61"></span>Examples</h4>
+<p>An example could be a Payment page where all context information is given to the Template through the <em>getUserInterfaceState</em> function and the interaction are handle in standard handle methods.</p>
+<p></p>
+<h3 id="view-store-contract"><span id="anchor-62"></span>View-Store Contract</h3>
+<h4 id="overview-6"><span id="anchor-63"></span>Overview</h4>
+<p>The intention of this contract is to define the communication of between the View and its state container, the Store.</p>
+<h4 id="purpose-6"><span id="anchor-64"></span>Purpose</h4>
+<ul>
+<li>Trace a line between Views and Stores.</li>
+</ul>
+<h4 id="content-7"><span id="anchor-65"></span>Content</h4>
+<p>As we expressed before, Views are all about data flows and information transformation, where in one extreme is the user interface and in the other the Store.</p>
+<p>This means that Stores does not know the source of the update, which helps them presenting a very simple interface.<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> Good Stores will provide methods and properties to the View that update its inner state.</p>
+<p>So the keys here are: a) understand that this is an API that alter some state b) make utterly explicit the aim of each action of this interface.<br>
+I believe that this can be achievable by stabling the following rules:</p>
+<ol style="list-style-type: decimal">
+<li>All method must be called in the form of: <em>verb Noun</em>. Where the verb express the action that will be performed, like update, remove, reset, etc, and the Noun is the property or properties where the action will be applied. For instance: <em>removeAddress</em>, <em>changeCountry</em>.</li>
+<li>The Noun of the first point must be a property of the Store.</li>
+</ol>
+<p>Clearly this convention is a workaround of the fact that the API produce side effects that are not explicit (on the other hand each of these methods could return a dictionary with the new and old values).<br>
+This is an effective and simple approach to update a Store with minimum knowledge about them.<br>
+Another tool that can be used by Stores is trigger events for the modified property.</p>
+<p>Although previous drawbacks already expressed, the creation of unit tests is achievable.</p>
+<p>Please refer to the Stores section for more details on this topic.</p>
+<h4 id="benefits-6"><span id="anchor-66"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>As Views will are light, generate traceability over the actions performed by the final user will be much more easier (perhaps extending View.prototype to log each user interface action).</li>
+<li>Stateless Views.</li>
+<li>Stores will behave similar than Backbone Models (use them if you consider appropriate).</li>
+<li>Stronger division between front and back-end thanks that Views wont know the existence of the back-end nor even the network interface.</li>
+</ol>
+<h4 id="extensibility-6"><span id="anchor-67"></span>Extensibility</h4>
+<p>As this contract first aim is indicate the role of each of the involved agents, the extensibility perspective lose sense. However it is valid to say that any new method over the Store interface is an extension of this contract.</p>
+<h4 id="examples-6"><span id="anchor-68"></span>Examples</h4>
+<p>Given a View that has expanders/accordions that can be collapsed or expanded used to show more details about the current user, changing this state would be a matter of calling a method like: <em>toggleUserInformation().<br>
+</em>When the View is being rendered, any Store's property, like <em>userInformationExpanded,</em> would be read and the final user interface update accordingly.</p>
+<p></p>
+<h3 id="view-child-views-contract"><span id="anchor-69"></span>View-Child-Views Contract</h3>
+<h4 id="overview-7"><span id="anchor-70"></span>Overview</h4>
+<p>Define the mechanism to compose Views.</p>
+<h4 id="purpose-7"><span id="anchor-71"></span>Purpose</h4>
+<ul>
+<li>Establish the roles of each View involve.</li>
+<li>Model the interaction between Views and Child Views.</li>
+</ul>
+<h4 id="content-8"><span id="anchor-72"></span>Content</h4>
+<p>As we have claimed before, each agent involved is responsible for one single thing; in this case Views to handle interactions.</p>
+<p>From a very practical perspective we can apply this simple principle of single responsibility to a large code base and conclude that each time we need to show/handle certain portion of user interface we must use the same single View.<br>
+In fact this observation leads us to very common concepts, which are composition and code re-usability.</p>
+<p>In the context of a View this means create Views that handle commonly repeated pieces of code (responsibilities). These Views will be called Child Views (please take into account that this is more a justification for marionette composite view than a new concept).</p>
+<p>Any View can be consider as a Child View, as the only condition to be a one is to be used by another View.<br>
+The composer View, from now on the Parent View, will be who indicate what are its components, as these are in fact just part of the Parent View that were removed away for the sake of simplicity.<br>
+In any case it is worth noticing that Parent Views must not know about internal implementation details of it Child Views. This is so because each View is a “class” and as such encapsulate state and computation from the rest of the system.</p>
+<p>To clarify any valid communication between a Parent View and a Child View, this must fulfill the following rules:</p>
+<ul>
+<li><em>Child Views will not know about it Parent View</em>. One can feel tempted to do this, as a Child View “<em>is part of the Parent View that was removed to avoid duplicated code”</em>. However, if our aim is reach re-usability and maintainability this will fight against us.</li>
+<li><em>Parent Views will only know how to create new Child Views and anything else about its Child Views</em>. This means the Parent Views will know how to create a Store to each Child View. This should be a simple task like passing a particular Store's property to the Child View constructor, although certain basic computation is understandable.</li>
+<li><em>When some communication is required, share the Store among child Views</em>. This mechanism of communication place naturally after agree with previous contracts.</li>
+</ul>
+<p>In order to have a clear understanding of this topic let see some examples:</p>
+<p>Given the scenario of master-details information page, let say an Invoice Details page (master) and the list of its items (details). How the CRUD of items is performed?<br>
+Firstly, we identify a Store for the entire page, one Parent View to show all the details of the Invoice and a list of Child View called items.</p>
+<p>The simplest cases are those when any edition is performed over the Parent View (master), where the data flow is not other rather than the one defined in View-Template Contract.</p>
+<p>For the items the first thing we identify is that every user interface aspect with will be controlled by the item's Template, as it has the responsibility to present the content obtained from the View's <em>getUserInterfaceState</em> method.<br>
+By accepting this and understanding the communication rules, it is easy to see that the event handlers for any user interface request from the item will be handle by the item's View. This interaction will ending invoking a method in the Child View's Store.</p>
+<p>It is of paramount importance to realize that:</p>
+<p>Parent View and Child Views share a common Store.</p>
+<p>This conclusion allows us to re-write the communication rules to: </p>
+<p>All Parent View – Child View communication will be performed through the shared Stored in a decoupled way. Which allows child views to re-render by listen to those event in the store that they care about.</p>
+<p>When the main components are in place, we can pay attention to some technical details:</p>
+<ul>
+<li><em>Dependencies</em>: If the Child View is internal of the current module, it will be required in the same way any other internal file is requested, by using require.<br>
+If the view is an external component (from another module) it will be injected as any other module dependency and the Parent View will be responsible to instantiate the Child View but not know WHAT View is instantiating.</li>
+<li><em>Collection View</em>: Along the description of this contract we have not mention, on purpose, particular responsibilities like iteration. A Collection View must exists to handle the responsibility of iterate over a collection.<br>
+Thankfully this View already exists on frameworks like marionettejs.</li>
+<li><em>Constructor and Destructors</em>: From the Parent View perspective its Child Views are always the same instances. Parent Views only instantiate new Child Views when it is first rendered.<br>
+This is the reason why views like 'Collection View' are so critical, as they must take into account the details of creating and destroying new Child Views when the passed in collection change.<br>
+Again, the Parent View will only see the single instance of the Collection View itself, and the rest of the process will be encapsulated by the Collection View.</li>
+<li><em>Event Handlers</em>: As we have described before Child Views should only attach to the user representation inputs (events). Perhaps there could be some particular case where Child Views can also attach to Store events, but this must be address carefully as it make the Child View harder to be reuse.</li>
+</ul>
+<h4 id="benefits-7"><span id="anchor-73"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Updating component Views (those that are module agnostic) should really easy, as Parent View wont really know what concrete external view are using.</li>
+<li>The memory consume will be minimum as Child Views will be created only once per View showed and only latter re-rendered.</li>
+<li>View code more maintainable.</li>
+</ol>
+<h4 id="extensibility-7"><span id="anchor-74"></span>Extensibility</h4>
+<p>Adding new child views plays an important part for the work of any dev, for this all Views must offer plugins to add extra child view without needing extend the parent view nor override it.</p>
+<h4 id="examples-7"><span id="anchor-75"></span>Examples</h4>
+<p>An Invoice details Page. This page shows all the details of an Invoice, like in any standard View it show information, and show the list of Items it has. If you want to change the child view used to render the invoice's items, you should only change the injected component view to another that expected the same Store interface.</p>
+<p></p>
+<h1 id="stores"><span id="anchor-76"></span>Stores</h1>
+<h2 id="definition-3"><span id="anchor-77"></span>Definition</h2>
+<p>This is the world I use in this post to describe:</p>
+<p>“A generic purpose data container.”</p>
+<p>We will used it to differentiate between user interface state and Backbone Models, in other words Front-end facing state and Back-end facing state.</p>
+<p>This concepts is necessary to maintain View clean and decoupled from the user interface state.</p>
+<p>Notice that Backbone.js makes an excellent job by offering Models, Views, Collection and Routers. But we will need to model this difference between front-end and back-end state specially in the case of business apps.</p>
+<p>Regarding the user interface state, along the history lot of stateless frameworks that does not take into account the state as a part of it, have been created. Reason why they all end it up falling. Just to mention some: All the XUL family, JSF, ASP.NET Forms, etc.</p>
+<p></p>
+<h2 id="components-3"><span id="anchor-78"></span>Components</h2>
+<p>From its definition any state can be put inside a Store, which in fact is the aim.</p>
+<p>But in order to make the state manageable we identify two parts:</p>
+<ul>
+<li><strong>User interface state</strong>. Hold values like if an accordion is collapsed or not. These can be any property</li>
+<li><strong>Back-end entities representation</strong>. These are our Backbone models.</li>
+</ul>
+<p></p>
+<h2 id="contracts-4"><span id="anchor-79"></span>Contracts</h2>
+<p>There is no contract Store-Model as Models are part of the Stores. Neither Store-Backend Service as Stores are general-purpose data container, it will be the related Model who knows about a back-end service.</p>
+<p></p>
+<h3 id="client-store-contract"><span id="anchor-80"></span>Client-Store Contract</h3>
+<h4 id="overview-8"><span id="anchor-81"></span>Overview</h4>
+<p>This contract formalize, from the Store point of view, how to interact with it.<br>
+In the following text the term client denote any consumer of a Store.</p>
+<h4 id="purpose-8"><span id="anchor-82"></span>Purpose</h4>
+<ul>
+<li>Define the basic interface any Store must fulfill.</li>
+</ul>
+<h4 id="content-9"><span id="anchor-83"></span>Content</h4>
+<p>Every Store most present a clear interface that leave totally clear what are the side effects of every action performed. In other words, we need to understand we are modeling a <strong>state</strong> API.</p>
+<p>There will be two possible interactions, read the state and update the state of the Store.</p>
+<p>To read any property I recommend be aligned with the Backbone.js API, use <em>get </em>methods. Idem for simple variables updates, use a <em>set </em>method.</p>
+<p>For more complex edition, let say, add an item into the cart, the idea will be the same as the one expressed in the View section, use method in the form <em>verb Noun</em>, like <em>addItemToCart</em> or <em>removeAddress</em>. In these cases a property with the name of the noun must exists on the Store.</p>
+<p>Notice here that it is not recommended to update internal properties of the Store directly. Although this can seems the right way to do it, this leave Stores without way to know when something change (in other words, use the method / API).</p>
+<p>As the Store does not care who is its client it must indicate what are the side effects when an updated is performed.<br>
+I would recommend two possible ways, on each invoked method return the list of values altered, or in the same way Backbone.js does, trigger an event for each property's value changed.</p>
+<p>The final point to describe is the usage of Stores. In most cases Stores, as a single unit, are single purpose, while Backbone Models are general purpose, as they can be used between modules or many times in the same module (the same back-end entity can be used for many reason in the front-end, for example a product).</p>
+<h4 id="benefits-8"><span id="anchor-84"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Controlled side-effects on the execution.</li>
+<li>Easy to centralize the edition of the user interface state. For instance, show by default collapsed all expander controls.</li>
+<li>Easy to debug applications.</li>
+</ol>
+<h4 id="extensibility-8"><span id="anchor-85"></span>Extensibility</h4>
+<p>As JavaScript is not a strong type language we can add extra method into the Store freely.</p>
+<h4 id="examples-8"><span id="anchor-86"></span>Examples</h4>
+<p>By using Stores you will be able to use a Store-factory and in this way apply application-wide setting, like in mobile all accordions are collapsed by default.</p>
+<p></p>
+<h3 id="store-factory-contract"><span id="anchor-87"></span>Store-Factory Contract</h3>
+<h4 id="overview-9"><span id="anchor-88"></span>Overview</h4>
+<p>In the context of this new Store entity I can envision the need of create another associated agent, a Store Factory. A Store Factory will be a class responsible to generate new instance of Stores.</p>
+<h4 id="purpose-9"><span id="anchor-89"></span>Purpose</h4>
+<ul>
+<li>Define a generic way to create new Stores.</li>
+<li>Localize the agent responsible for create new Stores.</li>
+<li>Centralize all common and standard user interface state properties.</li>
+</ul>
+<h4 id="content-10"><span id="anchor-90"></span>Content</h4>
+<p>This contract proposes the creation of a new Store Factory.<br>
+A Store Factory will be a Singleton class responsible for create new Stores. The aim is unify all user interface properties along your app. So this Store Factory wont necessary require a Model to create a new Store, anyway it represent an excellent place to inject mock model when necessary (unit test context).</p>
+<p>In the context of our business app the vast majority of clients a Store Factories will be Routers, as they are the responsible to instantiate new Views, moment when Stores are required.</p>
+<p>It is important to understand that this is a new concept that try to handle part of the problem of State Management, so in this contract there is not implementation details nor low level specifications. However, in my humble opinion the Store API could be something as simple as the following:</p>
+<p>Factory.createStore(ViewClass, [Mode], [Extra_Properties_Object]) ::= Store</p>
+<p>The Store will have at least one single method responsible to create new Stores, that will accept a View class, which will be mandatory, an optional Model instance and an optional object with extra user interface properties.</p>
+<h4 id="benefits-9"><span id="anchor-91"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Unified mechanism to change cross-module user interface properties.</li>
+<li>A standardization from UX teams (if you have any) on the most common user interface properties could help a lot.</li>
+</ol>
+<h4 id="extensibility-9"><span id="anchor-92"></span>Extensibility</h4>
+<p>I do not have a strong opinion on this, but a good starting point could be dependency injection container. Take them as an example to register a new association between Views and Stores. Please remember that our unit of work are Modules.</p>
+<h4 id="examples-9"><span id="anchor-93"></span>Examples</h4>
+<p>Stores are created, generally, when Views are created to render some content. In this scenario Routers will be responsible to call this Store Factory and pass the resulting Store to the new View.<br>
+For this almost any View called from a Router is a good example, for instance the User Profile page that render the user details accordion and need a Store to save its state.</p>
+<p></p>
+<h1 id="models"><span id="anchor-94"></span>Models</h1>
+<h2 id="definition-4"><span id="anchor-95"></span>Definition</h2>
+<p>Models currently are client side representation of back-end records (tables, documents, whatever you use).</p>
+<p>Let see some definitions:</p>
+<p><em>Backbone</em> “<em>Models are the <strong>heart</strong> <strong>of any JavaScript application</strong>, containing the <strong>interactive</strong> <strong>data</strong> as well as a large part of the <strong>logic</strong> surrounding it: conversions, validations, computed properties, and access control. You extend Backbone.Model with your domain-specific methods, and Model provides a basic set of functionality for managing changes.</em>”</p>
+<p>Based on this Backbone definition and the general idea expressed along this document, I feel attracted by this definition. In the context of our app I would define a Model as: extended client side representation of your back-end records.<br>
+Understanding by <em>extended,</em> that this classes posses all the method strictly related with the data they have, for example, the ability to add new items into the Model's Cart (method <em>addItemToCart</em>).</p>
+<p></p>
+<h2 id="components-4"><span id="anchor-96"></span>Components</h2>
+<p>Before listing Model's component, it is important to notice that Collection (backbone collections) are not analyzed in this documents as they only represent a particular use case for a Model, they represent a utility class rather than an architectural choice.</p>
+<p>In simple scenarios Models will be only composed why its inner properties, but in more complex cases a Model can be composed by other Models and other Collections.</p>
+<ul>
+<li><strong>Inner Models</strong>. In this point Collections are consider.</li>
+<li><strong>Simple properties</strong>. Canonical case of attributes (backbone inner property)</li>
+</ul>
+<p></p>
+<h2 id="contracts-5"><span id="anchor-97"></span>Contracts</h2>
+<p>Take in mind that not Model-View contract will be presented as the state related with a View will be accessed through a Store.</p>
+<p>As the my experience indicate, 99% of the time all business app are data centric. For this reason I strongly recommend using any OData-like backend service.</p>
+<p>Finally, notice that the bootstrapping of data model is being handle by the Module section of this document.</p>
+<h3 id="model-service-contract"><span id="anchor-98"></span>Model-Service Contract</h3>
+<h4 id="overview-10"><span id="anchor-99"></span>Overview</h4>
+<p>Formalize the single data entry point for all you app.</p>
+<h4 id="purpose-10"><span id="anchor-100"></span>Purpose</h4>
+<ul>
+<li>Centralize all network accessed</li>
+<li>Unify client-server communication</li>
+</ul>
+<h4 id="content-11"><span id="anchor-101"></span>Content</h4>
+<p>Although I assume a OData-like end-point as the main back-end data service, there could be cases where the back-end interaction will be more based on actions than data operations, for which reason this contract try to be as generic as possible.</p>
+<p>Based on our Models definition, they are client side only, which means that all the information needed to understand, create or edit a Model must be in the client. For this reason is that the list of properties, default values and the queries applied to obtains this information must belong to the client Model.</p>
+<p>Apart from this considerations, having a back-end url, back-end query, and so on, a Model is just Store used with a particular purpose.</p>
+<p>I wouldn't recommend any new API on this, just use the <em>defaults</em> property already provided by Backbone and regarding queries use any Odata-like framework.</p>
+<p>Finally, I conclude that model are the only agent in all your app that will be able to interact with the network interface. If there is a case where some interaction with the Back-end is needed which is not data-based (for example send an email from the client-side) a new agent to handle this cases should be created.</p>
+<h4 id="benefits-10"><span id="anchor-102"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>One place to define data used to populated front-end models.</li>
+<li>Better documentation, as each module define its data structure and default values.</li>
+<li>One place to handle all network requests. This is very important, because it will enable the creation of new features, like client side cache by using service-proxies.</li>
+</ol>
+<h4 id="extensibility-10"><span id="anchor-103"></span>Extensibility</h4>
+<p>Thanks that all data request specification is in the client side and the back-end is a generic query service, extend it is just a matter of update the front-end model. I recommend add plugins for this, so other devs can execute code on “pre-loading” data and “post-loading” data without need to override any module.</p>
+<h4 id="examples-10"><span id="anchor-104"></span>Examples</h4>
+<p>Search among all user order. In this case the View will fetch the related model and the model by using its internal odata-like query will retrieve the list of user orders.</p>
+<p></p>
+<h1 id="code"><span id="anchor-105"></span>Code</h1>
+<h2 id="definition-5"><span id="anchor-106"></span>Definition</h2>
+<p>This section analyze code as if it were a generic interface, trying to formalize those aspect that affect to all classes, models and so.</p>
+<p>This section does not describe style related aspect, as the aim of this section is model the interaction between pieces of code, no how the code looks like.</p>
+<p>The main aim is define a standard interface to be used along all your products, so when a new piece of code is released by you company any dev will feel comfortable and know how to update the code base.</p>
+<p></p>
+<h2 id="components-5"><span id="anchor-107"></span>Components</h2>
+<p>Although it can seem silly it is important to understand that the following list helps to or directly define an interface, so they must be treated carefully.</p>
+<ul>
+<li><strong>Generic Classes</strong>: Any utility class.</li>
+<li><strong>Predefined Classes</strong> (Store/Models, Views, Routers, etc): Any of the previous described components</li>
+<li><strong>Events</strong>: These have not been analyzed too much but also represent an important part of any code interface.</li>
+</ul>
+<p></p>
+<h2 id="contracts-6"><span id="anchor-108"></span>Contracts</h2>
+<h3 id="code-code-contract"><span id="anchor-109"></span>Code-Code Contract</h3>
+<h4 id="overview-11"><span id="anchor-110"></span>Overview</h4>
+<p>This contract formalize the generic API aspect of any piece of code inside your app.</p>
+<h4 id="purpose-11"><span id="anchor-111"></span>Purpose</h4>
+<ul>
+<li>Allow third parties to safely edit our code.</li>
+<li>Provide guidelines on how to define generic code APIs.</li>
+</ul>
+<h4 id="content-12"><span id="anchor-112"></span>Content</h4>
+<p>Let start by recognizing that each of the previous component define an interface or API. This can seem a bit unclear, as this generic approach is hard to control or automate, but from the consumer of the code there is always an interface to interact with.</p>
+<p><strong>Method aims</strong>. As in the majority of cases we interact in an imperative way, by calling method, each of them must leave totally clear in its name what its aim, what are the side effect of calling it.</p>
+<p>Each method most perform one and only one action, which internally can be decompose into multiples small tasks (composition is an excellent approach).</p>
+<p>Please refer to the other sections on this documents to read about the recommend method names in each case.</p>
+<p><strong>Method documentation</strong>. Some times the method name is not enough to express all that it does, this is why an excellent documentation is mandatory to <strong>ALL</strong> not auto-generated methods.<br>
+Documentation is not just a piece of obvious text above a method name, but a clear and concise description of the action performed, the types accepted and the types returned. Those latter points are extremely important, do not forget we develop in a dynamic type language, so saying that a method returns Object is not very valuable.</p>
+<p><strong>Method accessibility</strong>. Developer must know what method are safe to use (or less probably that they change in the next release of your app). This will help you a lot when your code is in production and new devs start editing the code base.</p>
+<p>I propose use two kind of names:</p>
+<ol style="list-style-type: decimal">
+<li><em>Public method</em>: These are the recommended to be used by any dev. So they must be very concrete and simple, and they will be preserve, as much as possible, during different version of your code.<br>
+As the aim of these method is present a public API, each of them most allow the installation of plugins where I recommend at least the following two: <em>pre&lt;Method_Name&gt;Execute</em> and <em>post&lt;Method_Name&gt;Execute</em>.<br>
+Perhaps throwing <em>pre</em> and <em>post</em> event can also be very useful for devs that want to extend your code.<br>
+It is very interesting to notice that a good use of this convention will help a lot to provide a clear semver versioning structure. When any of the public method is edit in such a way that is not legacy compatible any more, a new mayor version of the module must be created.<br>
+</li>
+<li><em>Private method</em>: These method are used and controlled by the author of the code. To distinguish these from the public ones, they must start with an underscore, like <em><strong>_</strong>validateItemOption</em> for instance.<br>
+These method wont offer any plugin at all, and can change or even disappear from one version to another.</li>
+</ol>
+<p>A good semver structure on our modules, plus a well followed code standard like this, will make the life of our devs much more easier. Allowing them to know which customization is still valid or not, what code can be edited safe and be able to extend.</p>
+<p>Generally, we can see how by defined a short group of clear rules, we can provide a lot of meta-data per method; what is does, how can we edited, how safe it is to edited, etc.</p>
+<p>This is very useful, if a Router need to invoke method in a View it will know that must use public methods.</p>
+<h4 id="benefits-11"><span id="anchor-113"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Code easy to extend.</li>
+<li>Customization will be more easy to preserve during different version of you app.</li>
+<li>Meta-data expressed on each method.</li>
+</ol>
+<h4 id="extensibility-11"><span id="anchor-114"></span>Extensibility</h4>
+<p>Generally all public methods must provide extension point, plugins, where its default execution flow can be edited. This is of paramount important if we want devs extend our code safely and without coupling their code to one concrete version of your app.</p>
+<p>When the context justify, the use of events is an excellent options, always namespacing them to identify the module, file, and method.</p>
+<p>The idea here is very simple, have decoupled that is easy to update, NOT wrap method and use clear interfaces.</p>
+<h4 id="examples-11"><span id="anchor-115"></span>Examples</h4>
+<p>If a new feature to trace the entire execution of an order wants to be created, thank to this contract it will be easier and clear what and how to trace. It will be just a matter of installing the corresponding plugin just for the public methods on the selected classes.</p>
+<p>This trace example can be generalized to almost any meta-feature or aspect that wants to be created cross-module. This things generally are very hard to accomplish lack of a clear and unified API across the code.</p>
+<p></p>
+<h1 id="routers"><span id="anchor-116"></span>Routers</h1>
+<h2 id="definition-6"><span id="anchor-117"></span>Definition</h2>
+<p>In the context of this post Routers are being used to link URLs to function execution.<br>
+This definition is so generic on purpose, because I don't have any rule nor guide on how Router should behave.</p>
+<p>Let see some definitions of Routers:</p>
+<p><em>Backbone</em>: “<em>Backbone.Router provides methods for routing <strong>client-side pages</strong>, and <strong>connecting them to actions</strong> and events. For browsers which don't yet support the History API, the Router handles graceful fallback and transparent translation to the fragment version of the URL.</em>”</p>
+<p>I personally would define a router as a class responsible for linking a URL with an Inversion Of Control mechanism which is aiming to instantiate new Views.</p>
+<p></p>
+<h2 id="components-6"><span id="anchor-118"></span>Components</h2>
+<p>Based on the Routers definition we can easily observe the following components:</p>
+<ul>
+<li><strong>Views</strong>: Router will link URLs to logic and the aim of this logic is show Views. So Views must be known by Routers.</li>
+<li><strong>Store Factory</strong>: In order to instantiate a View a Store is needed and so a Store-Factory.</li>
+<li><strong>Models</strong>: In order to instantiate a View a Store is needed, and in the vast majority of cases a Model is also required.</li>
+</ul>
+<p></p>
+<h2 id="contracts-7"><span id="anchor-119"></span>Contracts</h2>
+<h3 id="router-navigation-contract"><span id="anchor-120"></span>Router-Navigation Contract</h3>
+<h4 id="overview-12"><span id="anchor-121"></span>Overview</h4>
+<p>This contract try to make clear what is the relation between URL and Routers.</p>
+<h4 id="purpose-12"><span id="anchor-122"></span>Purpose</h4>
+<ul>
+<li>Formalize the creation of Backbone Routers.</li>
+</ul>
+<h4 id="content-13"><span id="anchor-123"></span>Content</h4>
+<p>A good starting point to understand this contract is remembering the way input requests came from the user presentation to the View's handler method.<br>
+For Router, the request come from the browser that update its URL (it is irrelevant who trigger this event) which generates the call of a Routers' method. Until here, this is just Backbone specifying URLs in the <em>routes</em> property.<br>
+In the same way that Views has a name convention, I propose that all method that are called in a Router when a URL change, navigation method for short, were prefixed with the words navigateTo and follow the structure:</p>
+<p>navigateTo &lt;View Type&gt; [option]</p>
+<p>The prefix will distinguish the navigation method from any other method in the router, View type will indicate what will be called, for example <em>list</em>, <em>edit</em>, etc. Finally, an optional suffix for those cases where the navigation will show a page with a very particular aim, for example <em>navigateToListClosed</em> to difference between a list of closed invoices from a list of open ones.</p>
+<p>To sum up, this is the only place is all the our code base, where the URL should be read. </p>
+<h4 id="benefits-12"><span id="anchor-124"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Router must be easy to unit test.</li>
+<li>It will be easy to know what method are routes handler.</li>
+</ol>
+<h4 id="extensibility-12"><span id="anchor-125"></span>Extensibility</h4>
+<p>Extending this contract can be seen in two ways; just add a new router to your Backbone.Router or extend the Backbone.Router code to allow a wider API.</p>
+<h4 id="examples-12"><span id="anchor-126"></span>Examples</h4>
+<p>Any standard Backbone.Router formatted as expressed above is a good example.</p>
+<p></p>
+<h3 id="router-view-contract"><span id="anchor-127"></span>Router-View Contract</h3>
+<h4 id="overview-13"><span id="anchor-128"></span>Overview</h4>
+<p>Formalize how and where Views must be created.</p>
+<h4 id="purpose-13"><span id="anchor-129"></span>Purpose</h4>
+<ul>
+<li>Clarify the process in which new Views are instantiated.</li>
+</ul>
+<h4 id="content-14"><span id="anchor-130"></span>Content</h4>
+<p>From the reading of the Router definition we can see that it will be the agent responsible to instantiate Views and inject on them all needed information. For this reason is that Routers must apply the Inversion of Control pattern, by injecting into Views, Stores, Model and any other require parameter.</p>
+<p>I leave under consideration of the reader evaluate that Router also pass into View the instances of the Children Views, achieving in this way really single one place where Views are created. Having this would allow the creation of Factories Views, usage of Dependency Injection Container, decouple Factories, etc.</p>
+<h4 id="benefits-13"><span id="anchor-131"></span>Benefits</h4>
+<ol style="list-style-type: decimal">
+<li>Single point where Views (not Children Views) are instantiated.</li>
+</ol>
+<h4 id="extensibility-13"><span id="anchor-132"></span>Extensibility</h4>
+<p>I am not really sure if it is worthy, with in the methods that handle navigation you could add plugin so external views can intercept this processing and even change the instance of the view that will be instantiated.</p>
+<h4 id="examples-13"><span id="anchor-133"></span>Examples</h4>
+<p>The rendering of any View is a good example for this contract.</p>
+<p></p>
+<h1 id="tools"><span id="anchor-134"></span>Tools</h1>
+<p>If you are developing a business application you will want to expend the most of your time adding value to your customer, not memorizing all this rules. For this to be true, you will need a nice set of tools to accomplish this.</p>
+<p>I wont give any particular recommendation, but take into account yeoman to create generator for your modules and any part of them. Gulp/grunt to define custom tasks that validate the name conventions, JSCS, JSLint, etc, etc.</p>
+<p>The only thing to point out; plan in advance the creation of this tools, you will need them.</p>
+<p><strong></strong></p>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p>https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>I would accept an extended JSON format to accepts comments, short-jsdoc is preferred.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>From now on the term “user interface” will be use, as the initials UI are generally used to refer to some graphical framework, like DOM, GTK or some other.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>I wont talk about models here, because Models in the business apps are related with the back-end state representation, and in this case a store refer ANY state represented in user interface, like the state of a collapsible accordion. <a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>I am not explaining here how Stores are created, but clearly having a Factory is great idea.<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>Notice the use of the term request and input are interchangeable, and there is not mention to events nor DOM element on purpose.<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>Please revise the last version of Backbone where this hard dependency with jQuery has been removed<a href="#fnref7">↩</a></p></li>
+<li id="fn8"><p>Consider the difference with the View-Template interface where knowing about jQuery event is mandatory.<br>
+Update: This is not longer true with the latest version of Backbone.<a href="#fnref8">↩</a></p></li>
+</ol>
+</div>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//mictianio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/02/02/2016-02-02-why-i-hate-backbone/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/01/23/2016-01-23-why-i-still-care-about-backbone/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/about/mictian-logo-sidebar.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/custom/img/avatar.png" alt="Mictian's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        mictian.public@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="/contact" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">February 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">January 2016<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            Theme - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/mictian" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+        <a href="https://www.linkedin.com/in/santiagomachado/uy" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
+                <span class="visuallyhidden">LinkedIn</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- RSS -->
+    
+        <a href="/atom.xml" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-rss">
+                <span class="visuallyhidden">RSS</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2015&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Mictian Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?uXT0f0G2aQQqrD+nrZBXiA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//mictianio.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
