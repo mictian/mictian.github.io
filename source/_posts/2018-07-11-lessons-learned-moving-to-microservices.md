@@ -98,7 +98,7 @@ Or, if your PO, Scrum Master or whoever involved is more interested in using the
 In this section I wont present any technical pattern neither any revolutionary new technic, but just a few basic remarks that I have observed while helping other companies in this transition.
 
 We all have seen the following diagram:
-(Show stack)
+![](/custom/img/2018-07-11-layers-diagram.png)
 
 It is the most basic diagram and application organization that a baby can think about. And highly probably, if you depart from a monolithic, it is also at a high level your current application structure.
 That means that you have three different places to start making the split. So far I haven't seen a company starting by spliting their UI, so for this simple reason I will exclude it.
