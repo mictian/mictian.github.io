@@ -6,7 +6,7 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "start": "npx hexo generate -w -f | hexo serve",
+    "start": "npx hexo generate -w -f | npx hexo serve -p 8080",
     "deploy": "npx hexo clean && hexo deploy"
   },
   "dependencies": {
