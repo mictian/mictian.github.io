@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "npx hexo generate -w -f | npx hexo serve -p 8080",
-    "deploy": "npx hexo clean && hexo deploy"
+    "deploy": "npx hexo clean && npx hexo deploy"
   },
   "dependencies": {
     "hexo": "^3.2.0",
