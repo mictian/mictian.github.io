@@ -43,7 +43,7 @@
     
     <title>
         
-            Archives: 2018/7 | 
+            Types or not types?... Is that the right question? | 
         
         Mictian Blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="Another blog to discuss about software and stuff">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",type types">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Mictian Blog">
-    <meta name="msapplication-starturl" content="https://mictian.io/archives/2018/07/">
+    <meta name="msapplication-starturl" content="https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Mictian Blog">
@@ -234,13 +234,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://mictian.io/archives/2018/07/">
+    <meta property="og:url" content="https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2018/7 | Mictian Blog">
+    <meta property="og:title" content="Types or not types?... Is that the right question? | Mictian Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="Another blog to discuss about software and stuff">
-    
+    <meta property="og:article:tag" content="type types"> 
 
+    
+        <meta property="article:published_time" content="Tue Jul 31 2018 12:00:00 GMT+0200">
+        <meta property="article:modified_time" content="Tue Jul 31 2018 18:23:47 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,13 +251,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://mictian.io/archives/2018/07/index.html" />
+        <link rel="canonical" href="https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/index.html",
+    "headline": "Types or not types?... Is that the right question?",
+    "datePublished": "Tue Jul 31 2018 12:00:00 GMT+0200",
+    "dateModified": "Tue Jul 31 2018 18:23:47 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Mictian",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/custom/img/avatar.png"
+        },
+        "description": "Hi, welcome to another blog to discuss about software development"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mictian Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",type types",
+    "description": "Another blog to discuss about software and stuff",
+}
+</script>
 
 
     
@@ -292,205 +325,272 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#A-small-story"><span class="post-toc-number">2.</span> <span class="post-toc-text">A small story</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#The-beginning"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">The beginning</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TypeScript"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">TypeScript</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Aha-moment"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Aha-moment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Documentation"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">Documentation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Extra-complexity"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">Extra complexity</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Limit-your-expressivity"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">Limit your expressivity</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Use-cases"><span class="post-toc-number">3.</span> <span class="post-toc-text">Use cases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Posting-data-to-an-endpoint"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Posting data to an endpoint</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IManager-amp-Manager"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">IManager &amp; Manager</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Large-source-code"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Large source code</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Conclusion"><span class="post-toc-number">4.</span> <span class="post-toc-text">Conclusion</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/31/2018-07-31-types-or-not-types-md/">Types or not types?... Is that the right question?</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/31/2018-07-31-types-or-not-types-md/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/custom/img/avatar.png" width="44px" height="44px" alt="Mictian's avatar">
-            </div>
-            <div>
-                <strong>Mictian</strong>
-                <span>Jul 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/24/2018-07-26-working-with-jmtpfs/">Working with jmtpfs</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/24/2018-07-26-working-with-jmtpfs/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/custom/img/avatar.png" width="44px" height="44px" alt="Mictian's avatar">
-            </div>
-            <div>
-                <strong>Mictian</strong>
-                <span>Jul 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/">Lessons learned moving to Microservices</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/custom/img/avatar.png" width="44px" height="44px" alt="Mictian's avatar">
-            </div>
-            <div>
-                <strong>Mictian</strong>
-                <span>Jul 11, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Types or not types?... Is that the right question?
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/custom/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Mictian</strong>
+        <span>Jul 31, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/type-types/">type types</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Types or not types?... Is that the right question?&url=https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/index.html&via=Mictian" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/index.html&title=Types or not types?... Is that the right question?" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Recently I had a small conversation with a coworker about <a href="https://nodejs.org/" target="_blank" rel="noopener">node</a> vs <a href="https://github.com/ry/deno" target="_blank" rel="noopener">deno</a>. This helped us as a trigger to talk about Typed languages vs not (loosely) typed languages.   \<br>In this post I will tell a small story about my transition throught different appreciations of this concept.</p>
+<h1 id="A-small-story"><a href="#A-small-story" class="headerlink" title="A small story"></a>A small story</h1><h2 id="The-beginning"><a href="#The-beginning" class="headerlink" title="The beginning"></a>The beginning</h2><p>I started learning and specially using developing languages with, what was back then, the most trendy and common languages. In other words, typed Object Oriented languages.  \<br>I spent a lot of time developing with Java while I was at the University and with C# in my first years as an employee.</p>
+<p>When JavaScript was a “just for validating user input” language and no one spoke about SPAs, I had the chance to start working with this beautiful language in a project.   \<br>I still remember reading books and articles online and thinking “Oh! This is the way to implement classes on JavaScript”.</p>
+<p>Luckily for me, there was no <code>class</code> keyword back then (Technically that keyword was indeed a reserved word of the language, as <code>default</code> and other were, but nothing else). This ended up being super beneficial for me as it force me to understand how JavaScript works in order to implement what I wanted.</p>
+<p>Some years later, I embraced JavaScript; loosely typed, no classes, simple but powerful syntax, prototype composition, etc. etc.</p>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>Short after, the first beta of <a href="https://www.typescriptlang.org" target="_blank" rel="noopener">TypeScript</a> was being announced by Microsoft. My first reaction was “I don’t need all the extra complexity of types! I can do all what I want without that unnecessary complexity”   \<br><em>Note</em>: I am talking about TypeScript because is the super-set of JavaScript that I know more. This does not mean that TypeScript is better than XXX. Personally, I have never really used Flow, or any other.</p>
+<p>Of course, the projects where I was working on were small ones. Developing teams no bigger than 5-10 members; zero to none community exposure, full control over all interaction and uses of our code, etc. You know the scenario I am talking about, small start-up projects.</p>
+<p>However, at the same time the project I was working on started to grow, the need for proper documentation, processes to validate up-to-date documentation, agreements between teams, etc. started to rise.</p>
+<p>Interesting enough, all the teams were developing tools and policies to handle these issues, while we all agree “that typescript was something that we do not need”</p>
+<p>At the same time, and for now unrelated with the previous, I was analyzing the difference between JavaScript and the languages that I used to work with and why I felt so comfortable with JavaScript and no with the others.   \<br>That leads me to Functional Programming (actually still does, I am still learning it).</p>
+<h2 id="Aha-moment"><a href="#Aha-moment" class="headerlink" title="Aha-moment"></a>Aha-moment</h2><p>I don’t think I will forget it any time soon. I had just started working on a new company and I was trying to catch-up with the hole company structure. One day when I was just arriving, a Business Analyst approached to me and told me, “the team XXX deployed a new version of their API and now the feature XXX does not work any more in production”.<br>At that moment, I didn’t know about the team, the feature, nor anything else what he was talking about.</p>
+<p>Note: Hold on before you jump, I know. There are a million things totally unrelated with OOP neither types that must have catch this problem much earlier.<br>I totally agree, but for now I am using this situation because it was my Aha-moment.</p>
+<p>As I was the only developer there, without hesitating I jumped into troubleshooting the problem.<br>I was quick to realize that the problem was on the structure of the payload we were posting to that API. The only problem was that I didn’t know what we were sending.</p>
+<p>Long story short, we had an API that made a couple of get queries, join all those results and created a new post request. So, in order to know what we were sending I needed to know what we were receiving back, which again force me to know what we were sending to the first API call.   \<br>Believe it or not, there were three levels of this nonsense, request join send.</p>
+<p><strong>If only I had a type definition of what we were sending or expecting back</strong>…</p>
+<p>In one second it fell apart all my previous false believes.</p>
+<h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><p>Documentation’s purpose is to explain a) <strong>why</strong> a piece does what it does and b) <strong>what</strong> it does (if you use small pieces of code and clear naming convention #b should not be too necessary).   \<br>But clearly, documentation purpose is not to explain what things are.</p>
+<p>Would it make sense to you to define a <code>Person</code> class and in its documentation says “it is a human-being that has two legs…”? Probably no.  \<br>I do understand if you are thinking that this is not always true. But in my experience, 99.9% of those cases is due to the lack of domain knowledge, for which I strongly recommend follow <a href="https://en.wikipedia.org/wiki/Domain-driven_design" target="_blank" rel="noopener">Domain Driven Design</a>.</p>
+<p>Besides, there is a root point that cannot be avoided, <strong>documentation is not code</strong>. Developers update code, features are made with code.<br>In other words, documentation and code are inherently different things, which cause an extra burden to maintain in sync.</p>
+<p>In my case, there was almost no documentation, and the few things that were documented were out-dated.</p>
+<h3 id="Extra-complexity"><a href="#Extra-complexity" class="headerlink" title="Extra complexity"></a>Extra complexity</h3><p>Having a type definition add simplicity and expressiveness to your code base.   \<br>Without even mention that the cost of solving this issues would have taken just a matter of minutes reading a type definition and sending a couple of emails, rather than ours.</p>
+<p>Actually, this is the most important point of this post. Types provides an excellent tool to model reality, to express semantic and easily represent concepts from reality in code.   \<br>However, take special attention to the fact that I am not taking about classes, objects or any other concept/formalism. Just types.</p>
+<h3 id="Limit-your-expressivity"><a href="#Limit-your-expressivity" class="headerlink" title="Limit your expressivity"></a>Limit your expressivity</h3><p>Another argument that I have hear and even I thought, is that type-systems like TypeScript, limit your options when modeling a solution.   \<br>In this case the presented examples refer to the ability to iterated over the properties of an object, apply logic based on property names, have a variable property value (if it an object then, or if it is a number then), etc.   \<br>In my experience, after you give a change to types in JavaScript, there are always ways to express and solve the same using types. Highly probably your final code wont be as esoteric as you would like, but less people would have problems understanding it.</p>
+<h1 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h1><p>Finally, I will present some basic cases to reinforce the message.</p>
+<h2 id="Posting-data-to-an-endpoint"><a href="#Posting-data-to-an-endpoint" class="headerlink" title="Posting data to an endpoint"></a>Posting data to an endpoint</h2><p>More often that not, when interacting with an endpoint we use terms like “payload”, “query”, “request”, etc.<br>If your payload is of type <code>User</code> I would know that POST action is creating a User entity and also what data is being sent. However, if your request is an object, well, it is hard to tell what you are sending.<br>Besides, I think that we all agree that a good API defines what parameters accepts and what output generates (generally using JSON-Schema, with OpenAPI). And, isn’t that a type definition?</p>
+<h2 id="IManager-amp-Manager"><a href="#IManager-amp-Manager" class="headerlink" title="IManager &amp; Manager"></a>IManager &amp; Manager</h2><p>In this post I do not want to discus about OOP, or inheritance vs composition or any other related topics.   \<br>Those are ways to use types in the context of OOP. For example following the <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle" target="_blank" rel="noopener">Liskov substitution principle</a> or using <a href="https://en.wikipedia.org/wiki/Dependency_injection" target="_blank" rel="noopener">Dependency Injection</a>. But not needed to use Types.<br>These concepts need types, but types don’t need OOP neither those concepts.</p>
+<h2 id="Large-source-code"><a href="#Large-source-code" class="headerlink" title="Large source code"></a>Large source code</h2><p>I have worked on companies that made frameworks for our customers and partners.   \<br>In this kind of scenario, where the consumer of your assets is not just a final user, having clear and disambiguate APIs is mandatory.   \<br>Your partner developers don’t care about what the API documentation says, they will be interested in what the code accepts and returns.</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Types represent a tool to express and model concept from reality and business domain, and also is an excellent tool to make your code more expressive, understandable and maintenance-friendly.</p>
+<p>Why now?<br>TypeScript, Flow and others are not something new.   \<br>But it came to my attention that there are still plenty of people rejecting type system by the wrong reasons.   \<br>I am not saying that you should use TypeScript or any other type system, I just want to show through my experience that sometimes we have the wrong conception due to the fact that we associate different concepts together.   \<br>Types not necessary mean OOP, types make sense in its own, regardless the way you code in JS.   \<br>For the sake of giving an example, we could use JSON-schema to model types without using anything form TypeScript. Clearly the developing experience wouldn’t be the same.</p>
+<p>On the other hand, JavaScript allows us to take a more functional-oriented approach, and languages like Haskell are strongly-typed.</p>
+<p>So, if you have TypeScript or Flow, try one of them for a few weeks and let me know.  \<br>Hope that you enjoyed reading this. if you have any comments please share them :D.</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//mictianio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/07/24/2018-07-26-working-with-jmtpfs/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mictian.io/"/>
-  <updated>2018-07-25T19:15:37.347Z</updated>
+  <updated>2018-07-31T18:23:47.136Z</updated>
   <id>https://mictian.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Types or not types?... Is that the right question?</title>
+    <link href="https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/"/>
+    <id>https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/</id>
+    <published>2018-07-31T10:00:00.000Z</published>
+    <updated>2018-07-31T18:23:47.136Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Recently I had a small
+        
+      
+    
+    </summary>
+    
+    
+      <category term="type types" scheme="https://mictian.io/tags/type-types/"/>
+    
+  </entry>
   
   <entry>
     <title>Working with jmtpfs</title>
