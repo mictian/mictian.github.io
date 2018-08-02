@@ -33,7 +33,7 @@ At the same time, and for now unrelated with the previous, I was analyzing the d
 That leads me to Functional Programming (actually still does, I am still learning it).
 
 ## Aha-moment
-I don't think I will forget it any time soon. I had just started working on a new company and I was trying to catch-up with the hole company structure. One day when I was just arriving, a Business Analyst approached to me and told me, "the team XXX deployed a new version of their API and now the feature XXX does not work any more in production".
+I don't think I will forget it any time soon. I had just started working on a new company and I was trying to catch-up with the whole company structure. One day when I was just arriving, a Business Analyst approached to me and told me, "the team XXX deployed a new version of their API and now the feature XXX does not work any more in production".
 At that moment, I didn't know about the team, the feature, nor anything else what he was talking about.
 
 Note: Hold on before you jump, I know. There are a million things totally unrelated with OOP neither types that must have catch this problem much earlier.
