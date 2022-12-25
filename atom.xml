@@ -1,241 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Mictian Blog</title>
-  
-  
+
+
   <link href="/atom.xml" rel="self"/>
-  
+
   <link href="https://mictian.io/"/>
-  <updated>2018-06-25T18:01:00.193Z</updated>
+  <updated>2018-08-02T17:23:57.598Z</updated>
   <id>https://mictian.io/</id>
-  
+
   <author>
     <name>Mictian</name>
-    
+
   </author>
-  
+
   <generator uri="http://hexo.io/">Hexo</generator>
-  
+
+  <entry>
+    <title>Types or not types?... Is that the right question?</title>
+    <link href="https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/"/>
+    <id>https://mictian.io/2018/07/31/2018-07-31-types-or-not-types-md/</id>
+    <published>2018-07-31T10:00:00.000Z</published>
+    <updated>2018-08-02T17:23:57.598Z</updated>
+
+    <summary type="html">
+
+
+
+
+
+          &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Recently I had a small
+
+
+
+    </summary>
+
+
+      <category term="type types" scheme="https://mictian.io/tags/type-types/"/>
+
+  </entry>
+
+  <entry>
+    <title>Working with jmtpfs</title>
+    <link href="https://mictian.io/2018/07/24/2018-07-26-working-with-jmtpfs/"/>
+    <id>https://mictian.io/2018/07/24/2018-07-26-working-with-jmtpfs/</id>
+    <published>2018-07-24T10:00:00.000Z</published>
+    <updated>2018-07-25T19:15:37.347Z</updated>
+
+    <summary type="html">
+
+
+
+
+
+          &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;This post is aimed to two
+
+
+
+    </summary>
+
+
+      <category term="linux jmtpfs" scheme="https://mictian.io/tags/linux-jmtpfs/"/>
+
+  </entry>
+
+  <entry>
+    <title>Lessons learned moving to Microservices</title>
+    <link href="https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/"/>
+    <id>https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/</id>
+    <published>2018-07-11T10:00:00.000Z</published>
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
+    <summary type="html">
+
+
+
+
+
+          &lt;h1 id=&quot;Leasons-learned-migrating-to-Microservices&quot;&gt;&lt;a href=&quot;#Leasons-learned-migrating-to-Microservices&quot; class=&quot;headerlink&quot; title=&quot;Leasons
+
+
+
+    </summary>
+
+
+      <category term="microservices" scheme="https://mictian.io/tags/microservices/"/>
+
+  </entry>
+
   <entry>
     <title>Codility Lesson 04 (missing exercise)</title>
     <link href="https://mictian.io/2016/08/30/2016-08-30-codility-lesson-4/"/>
     <id>https://mictian.io/2016/08/30/2016-08-30-codility-lesson-4/</id>
     <published>2016-08-30T10:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Let’s finish the final
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Codility Lesson 04</title>
     <link href="https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/"/>
     <id>https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/</id>
     <published>2016-08-15T10:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Counting elements!&lt;br&gt;It is
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Codility Lesson 03</title>
     <link href="https://mictian.io/2016/08/08/2016-08-08-codility-lesson-3/"/>
     <id>https://mictian.io/2016/08/08/2016-08-08-codility-lesson-3/</id>
     <published>2016-08-08T10:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;It’s time to talk about time
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Codility Lesson 02</title>
     <link href="https://mictian.io/2016/08/02/2016-08-02-codility-lesson-2/"/>
     <id>https://mictian.io/2016/08/02/2016-08-02-codility-lesson-2/</id>
     <published>2016-08-02T10:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;This lesson is, in theory,
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Codility lessons</title>
     <link href="https://mictian.io/2016/07/22/2016-07-22-codility-lessons/"/>
     <id>https://mictian.io/2016/07/22/2016-07-22-codility-lessons/</id>
     <published>2016-07-22T10:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Sorry, I haven’t made a post
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>How to create a simple github blog</title>
     <link href="https://mictian.io/2016/02/24/2016-02-24-how-to-create-a-github-blog/"/>
     <id>https://mictian.io/2016/02/24/2016-02-24-how-to-create-a-github-blog/</id>
     <published>2016-02-24T11:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Hi, today I want to tell you
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>A Pluginable architecture</title>
     <link href="https://mictian.io/2016/02/20/2016-02-20-a-pluginableaarchitecture/"/>
     <id>https://mictian.io/2016/02/20/2016-02-20-a-pluginableaarchitecture/</id>
     <published>2016-02-20T11:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Some days ago a friend of
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Why you should not use Backbone JS</title>
     <link href="https://mictian.io/2016/02/02/2016-02-02-why-i-hate-backbone/"/>
     <id>https://mictian.io/2016/02/02/2016-02-02-why-i-hate-backbone/</id>
     <published>2016-02-02T11:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;I know, if you have read my
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>A possible architecture with Backbone</title>
     <link href="https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/"/>
     <id>https://mictian.io/2016/01/27/2016-01-27-possible-architecture-with-backbone/</id>
     <published>2016-01-27T11:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;section&quot;&gt;&lt;/h1&gt;
 &lt;h1 id=&quot;introduction&quot;&gt;&lt;span id=&quot;anchor&quot;&gt;&lt;/span&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This document try to present a solution, as
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
   <entry>
     <title>Why I still care about Backbone JS</title>
     <link href="https://mictian.io/2016/01/23/2016-01-23-why-i-still-care-about-backbone/"/>
     <id>https://mictian.io/2016/01/23/2016-01-23-why-i-still-care-about-backbone/</id>
     <published>2016-01-23T11:00:00.000Z</published>
-    <updated>2018-06-25T18:01:00.193Z</updated>
-    
+    <updated>2018-07-24T19:05:59.785Z</updated>
+
     <summary type="html">
-    
-      
-      
-        
-        
+
+
+
+
+
           &lt;h1 id=&quot;State-of-the-Art&quot;&gt;&lt;a href=&quot;#State-of-the-Art&quot; class=&quot;headerlink&quot; title=&quot;State of the Art&quot;&gt;&lt;/a&gt;State of the Art&lt;/h1&gt;&lt;p&gt;I may start
-        
-      
-    
+
+
+
     </summary>
-    
-    
+
+
   </entry>
-  
+
 </feed>

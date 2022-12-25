@@ -40,11 +40,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Title -->
-
+    
     <title>
-
-            Codility Lesson 04 |
-
+        
+            Lessons learned moving to Microservices | 
+        
         Mictian Blog
     </title>
 
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="Another blog to discuss about software and stuff">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",microservices">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -64,9 +64,9 @@
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
 
-
+        
             <script src="/js/ie-blocker.en.js"></script>
-
+        
     <![endif]-->
 
     <!-- Import lsloader -->
@@ -76,15 +76,15 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Import CSS -->
-
+    
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?zwuvHoVGMXAuUaolLVFNig==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
+        
 
+    
 
-
-
-
+    
 
     <!-- Config CSS -->
 
@@ -94,7 +94,7 @@
     font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     overflow-x: hidden !important;
   }
-
+  
   code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
@@ -208,14 +208,14 @@
 
 
     <!-- Import jQuery -->
-
+    
         <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-
+    
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Mictian Blog">
-    <meta name="msapplication-starturl" content="https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/">
+    <meta name="msapplication-starturl" content="https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Mictian Blog">
@@ -223,49 +223,49 @@
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!-- Site Verification -->
-
-
+    
+    
 
     <!-- RSS -->
-
-
+    
+        
             <link rel=alternate type="application/atom+xml" href="/atom.xml">
-
-
+        
+    
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/">
+    <meta property="og:url" content="https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Codility Lesson 04 | Mictian Blog">
+    <meta property="og:title" content="Lessons learned moving to Microservices | Mictian Blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="Another blog to discuss about software and stuff">
+    <meta property="og:article:tag" content="microservices"> 
 
-
-
-        <meta property="article:published_time" content="Mon Aug 15 2016 12:00:00 GMT+0200">
+    
+        <meta property="article:published_time" content="Wed Jul 11 2018 12:00:00 GMT+0200">
         <meta property="article:modified_time" content="Tue Jul 24 2018 19:05:59 GMT+0000">
-
+    
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Add canonical link for SEO -->
-
-        <link rel="canonical" href="https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/index.html" />
-
+    
+        <link rel="canonical" href="https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/index.html" />
+    
 
     <!-- Structured-data for SEO -->
-
-
+    
+        
 
 
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/index.html",
-    "headline": "Codility Lesson 04",
-    "datePublished": "Mon Aug 15 2016 12:00:00 GMT+0200",
+    "mainEntityOfPage": "https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/index.html",
+    "headline": "Lessons learned moving to Microservices",
+    "datePublished": "Wed Jul 11 2018 12:00:00 GMT+0200",
     "dateModified": "Tue Jul 24 2018 19:05:59 GMT+0000",
     "author": {
         "@type": "Person",
@@ -284,33 +284,33 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",microservices",
     "description": "Another blog to discuss about software and stuff",
 }
 </script>
 
 
-
+    
 
     <!-- Analytics -->
-
-
-
+    
+    
+    
 
     <!-- Custom Head -->
-
-
+    
+        
             <link rel='stylesheet' type='text/css' href='/contact/mui.min.css' /> <link rel='stylesheet' type='text/css' href='/custom/css/style.css' /> <script type='text/javascript' src='/custom/js/script.js' ></script>
-
-
+        
+    
 
 </head>
 
 
-
+    
         <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -318,16 +318,16 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span id="MD-burger-id" class="MD-burger-layer"></span>
                         </button>
-
+                    
 
                     <!-- Post TOC -->
 
-
+    
     <!-- Back Button -->
     <!--
     <div class="material-back" id="backhome-div" tabindex="0">
@@ -346,17 +346,17 @@
 
 
     <!-- Left aligned menu below button -->
-
-
+    
+    
     <button id="post-toc-trigger-btn"
         class="mdl-button mdl-js-button mdl-button--icon">
         <i class="material-icons">format_list_numbered</i>
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Lesson-04-a-PermCheck"><span class="post-toc-number">2.</span> <span class="post-toc-text">Lesson 04-a: PermCheck</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Solution</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Code"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Lesson-04-b-PermCheck"><span class="post-toc-number">3.</span> <span class="post-toc-text">Lesson 04-b: PermCheck</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Solution-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Solution</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Code-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Lesson-04-c-FrogRiverOne"><span class="post-toc-number">4.</span> <span class="post-toc-text">Lesson 04-c: FrogRiverOne</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Solution-2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Leasons-learned-migrating-to-Microservices"><span class="post-toc-number">1.</span> <span class="post-toc-text">Leasons learned migrating to Microservices</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Introduction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Why-microservices"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Why microservices</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-to-reach-it"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">How to reach it</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Culture"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Culture</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-to-start-technical-perspective"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">How to start (technical perspective)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Data-first"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Data first</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Logic-first"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Logic first</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Value"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Value</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Migration-vs-Extension"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Migration vs Extension</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">2.</span> <span class="post-toc-text">Summary</span></a></li></ol>
     </ul>
-
+    
 
 
 
@@ -370,10 +370,10 @@
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                 <!-- Post Header(Thumbnail & Title) -->
-
+                
     <!-- Paradox Post Header -->
-
-
+    
+        
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
             <script type="text/ls-javascript" id="post-thumbnail-script">
@@ -383,10 +383,10 @@
     $('.post_thumbnail-random').addClass('lazy');
 </script>
 
-
-
+        
+    
             <p class="article-headline-p">
-                Codility Lesson 04
+                Lessons learned moving to Microservices
             </p>
         </div>
 
@@ -394,7 +394,7 @@
 
 
 
-
+                
                     <!-- Paradox Post Info -->
                     <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
@@ -405,7 +405,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Mictian</strong>
-        <span>Aug 15, 2016</span>
+        <span>Jul 11, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -419,101 +419,168 @@
     -->
 
     <!-- Qrcode -->
-
+    
 
     <!-- Tags (bookmark) -->
-
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/microservices/">microservices</a>
+    </ul>
+    
 
     <!-- Share -->
-
+    
         <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
     <i class="material-icons" role="presentation">share</i>
     <span class="visuallyhidden">share</span>
 </button>
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-
-
+    
 
     <!-- Share Weibo -->
-
+    
 
     <!-- Share Twitter -->
-
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Codility Lesson 04&url=https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/index.html&via=Mictian" target="_blank">
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Lessons learned moving to Microservices&url=https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/index.html&via=Mictian" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
         </a>
-
+    
 
     <!-- Share Facebook -->
-
+    
 
     <!-- Share Google+ -->
-
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/index.html" target="_blank">
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
         </a>
-
+    
 
     <!-- Share LinkedIn -->
-
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/index.html&title=Codility Lesson 04" target="_blank">
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/index.html&title=Lessons learned moving to Microservices" target="_blank">
             <li class="mdl-menu__item">
                 Share to LinkedIn
             </li>
         </a>
-
+    
 
     <!-- Share QQ -->
-
+    
 
     <!-- Share Telegram -->
-
+    
 </ul>
 
-
+    
 </div>
 
-
+                
 
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Leasons-learned-migrating-to-Microservices"><a href="#Leasons-learned-migrating-to-Microservices" class="headerlink" title="Leasons learned migrating to Microservices"></a>Leasons learned migrating to Microservices</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This post is a small recap of things that I have observed after working in many projects that moved monolithic applications into microservices architectures, and my grain of salt trying to help.</p>
+<p>Before start talking about what have been my experience so far, let first recap the things that we must “suffer” or the things that we must understand in order to move to micro-services.</p>
+<h3 id="Why-microservices"><a href="#Why-microservices" class="headerlink" title="Why microservices"></a>Why microservices</h3><p>(1) My first learned lesson was that <strong>the entire company must have a common understanding of why we are moving to a different architectural pattern.</strong></p>
+<p>The first question that you must ask to yourself is <strong>why we want to move to a microservices architecture?</strong>.<br>If in your answer you are not describing a business problem, then your are destined to failure (perhaps not so dramatically). It seems that in IT companies engineers tends to forget the reason why companies exists: To solve a customer problem using software as a means to an end.</p>
+<p>Althoug this is obvious and at first nonessential, the main idea is to keep business needs and engineering as one aligned team in wich all members are trying to solve the same problem.</p>
+<p>To emphasize the difference between technical needs and business needs, let just list some common examples:</p>
+<ul>
+<li><em>Scale</em>: In this case the needs should be something like “Based on our plans of expansion, or our growth rate, we see a need to scale our current infrastructure”, if on the other hand you describe your need as “our server’s CPU is at 80% in average, so we need to find a solution” you probably are not listening to the right bell.</li>
+</ul>
+<ul>
+<li><em>Move fast</em>: “We need to rebuild our current monolithic so we will be able to generate better tracing of our app”.<br>Again, not backed by any direct business value. Do you know for sure that adding better tracing or being prepare to troubleshoot an error in production is valuable from the business point of view? Without a doubt from the technical point of view this statement is trying to improve the infrastructure, but without business alignment you don’t know if the company is planning to sell that part of the business.</li>
+</ul>
+<ul>
+<li><em>Maintenance cost</em>: Believe it or not, ethical or not, there are companies that depends on high maintenance costs to subsist, so improving the code base can actually be harmful (let leave the ethical discussion for another occation - there are plenty of reasons why I am not a director/manager).</li>
+</ul>
+<p>Please, do not take this as a way to express or describe a problem, but rather as a recommendation to see if your journey into microservices has the right reasons to start. Otherwise, in my experience, you will face uncountable discussions between managment and engineering.<br>I, as an engineer, totally understand the value of having a better code; from less maintenance cost to greater speed to develeop new features. But make sure that business guys in your organization see the value aswell.</p>
+<h2 id="How-to-reach-it"><a href="#How-to-reach-it" class="headerlink" title="How to reach it"></a>How to reach it</h2><p>In the introduction section I used the word “suffer”, and the reason of that is because it is common that teams in charge of starting this transition do this as an engineering exercise.<br>(2) My second lesson was that <strong>whoever is responsible to start the microservices transition should try their best to no over-engineering the problem at hand.</strong></p>
+<p>In a few words I would answer this section just saying: Developing an MVP as in any other product. The fact that we are describing an architectural pattern does not mean that we need to build the world to be able to have some value back.</p>
+<p>One common mistake that I have observed more than once is, teams trying to solve all problem at once.<br>For example, while creating the first services also develop a “framework” so future services will be easy to develop. Create a generic deployment infrastructure so other teams can make the transition more easily to the “new” source code.<br>I could continue writing sentences on how teams try to justify their overwork and over-engineering efforts, but based on my experience teams ended up chasing ghosts; solving no one problems, refactoring the code over and over again without really adding value.<br>So, my recommendation here is, without forgetting what you will need to do next, keep the focus. Develop the framework later, once that you understand what are the pieces of it.<br>At the beginning it will be enough to just have a shared list of ideas, tentative components that could be extracted as generic, lessons learned in the process so far, or whatever thing you consider valueble to write down.</p>
+<p>This will start to sound repetitive, but the key is: alignment. What is the problem that we are solving? What are we proving? Ok, implement or prove that.</p>
+<p>A final observation in this lesson is to not forget how to develop software. Although it sounds stupid, but it is quite interesting to see companies that start planing microservices infrastructure going layer by layer.<br>First, defining the database schema, then the business logic, and once that is all in place plan how and when do the UI.</p>
+<p>(3) Related with the next point, culture, I have learned, specially in companies with friction towards changes, that <strong>changes needs to be done in small steps.</strong><br>When start planning for a first MVP, join only the minimun amount of people needed for the job. Start simple, one team and one clear goal. Later on, the rest of the company will follow.<br>Otherwise you will ended up distracting other parts of the organization, generating noise in sectors that should be working business as usual.</p>
+<p>Assume that the process will take time and pushing it wont help.</p>
+<h2 id="Culture"><a href="#Culture" class="headerlink" title="Culture"></a>Culture</h2><p>This tends to be one of the most misunderstood points, and sometimes rooted in the fragmented vision of the different roles inside a company.<br>Given one company and one product, we should see one team with one vision. (clearly by one team I do not mean one scrum team, but rather a unified big group of people working towards the same solution)</p>
+<p>(4) My fourth lesson is that <strong>not all campanies are mature enough, in terms of agile processes, to move to a microservices architecture.</strong></p>
+<p>In the same way that in a call center it’s not possible to use waterfall (how you will predict how many calls you will receive the first day?) A company that moves to microservices needs to adhere to agile principles (It does not need clarification that this is my vision).</p>
+<p>You will be entering in a new project with millions of unknowns, your organization does not have experience with this, the technical offering in the market is constantly changing and on top of that it will be expensive… Waterfall?<br>In fact all of those are secondary points, the main reason to follow agile principles is because they align with the organization structure that you need to have; independent and autonomous teams.</p>
+<p>If in your company you’re a “control freak”, micro-managing people and your organization chart is more hight that wide… Well, my experience determines that you will face serious issues.</p>
+<p>A subtle and sometimes unspoken point about how microservices scales, is that they scale by scaling the teams behind them. And by this I mean horizontally, making the hierarchical pyramid of your company higher, believe me, wont scale.</p>
+<p>Another important phenomenon that occurs from time to time, is that stakeholders start to get existed and push the dev team. Remember that it must be a PO and he/she must have a clear role in this process.</p>
+<p>(5) Another point that I have observed is to <strong>trust your team and let them grow (technically) in the same way that the company is growing (driver reason why you are going to microservices).</strong></p>
+<p>It is common, specially in medium size companies, to hire “experienced” people to guide and lead the migration process.<br>Clearly, at first, this sounds as a good idea; someone with more experience must know what are the common problems and best practices, so in this way the company will save time and money.</p>
+<p>If you understand, believe and practice agile principles, sooner than later you will see how this tends to be a bad idea.</p>
+<p>Leaders are not impose by managers/directors,  specially technical ones. Leader are choosen by the teams.<br>Generally a team member is recognized as a such. Someone that the team trusts and knows.</p>
+<p>If you want extra help to avoid solving the same problems the industry have already solved, create a committee with external technical advisors/consultants. Understanding that their role will be to serve the teams not the other way around.<br>Leaders must arise from the teams, otherwise they will face big communication and willingness challenges.</p>
+<p>Trust in your team, after all they were developing the software you are using so far.</p>
+<p>(6) <strong>Be genuine when you set your goals and use agile methodologies.</strong><br>Believing and fighting for agile principles shouldn’t be one man task.<br>If in your team you have members more concerned in showing off their impressive technical skills rather than empowering the team, instead of counting with a good developer you have a liability.<br>Or, if your PO, Scrum Master or whoever involved is more interested in using the migration project as an insignia of his/her good skills, again you are losing the focus of what you should be doing.</p>
+<h2 id="How-to-start-technical-perspective"><a href="#How-to-start-technical-perspective" class="headerlink" title="How to start (technical perspective)"></a>How to start (technical perspective)</h2><p>In this section I wont present any technical pattern neither any revolutionary new technic, but just a few basic remarks that I have observed while helping other companies in this transition.</p>
+<p>We all have seen the following diagram:<br><img src="/custom/img/2018-07-11-layers-diagram.png" alt=""></p>
+<p>It is the most basic diagram and application organization that a baby can think about. And highly probably, if you depart from a monolithic, it is also at a high level your current application structure.<br>That means that you have three different places to start making the split. So far I haven’t seen a company starting by spliting their UI, so for this simple reason I will exclude it.</p>
+<p>Important Note: The following sections assume that you are choosing one of the following strategies in the context of a business story that adds values to the final product.</p>
+<h3 id="Data-first"><a href="#Data-first" class="headerlink" title="Data first"></a>Data first</h3><p>Examples of requirements that are good drivers to take this approach are: “by using a more secure storage we will able to comply with regulation XXX”, or “by using the DB engine XX it will allow us to execute more transactions per second and in this way serve the customers that we are expecting to have in the next quarter”.</p>
+<p>Just a simple note in case that you reader are not a technical guy, it wont be possible to use a different DB engine without applying at least some minor changes to the Business Logic Layer, the fact the we discuss about data first is just a matter on where we are putting the focus.</p>
+<p>(7) <strong>Unless that you are working on a rather new company, don’t think that your DB schema is well organized.</strong><br>It is just a matter of being honest, we know that most of the DBs out there are not 100% in 6th normal form, so, don’t underestimate the amount of evil joins, SQL queries, and store procedures that you have.</p>
+<p>Try to not build a data synchronization framework. I don’t know why, lot of engineers ended up needing one. Please evaluate if it is really needed, and if that is the case (in many cases is not) try to not build a fancy one from scratch.</p>
+<p>Finally, based on your data usage, it could be beneficial to write double and have one data souce to be read-only, allowing in this way that subsequent increments on the MVP implement read logic from this new data store.</p>
+<h3 id="Logic-first"><a href="#Logic-first" class="headerlink" title="Logic first"></a>Logic first</h3><p>In my experience developers generally have better understanding on the code base structure than the DB schema, which could make it easy to start from splitting the logic first.</p>
+<p>Examples of requirements that are good drivers to star from the logic are: “as we are planning to integrate with the service XXX we could use a new set of endpoints that expose the data needed, in a new service”, or “based on the new regulation of data protection we will need to implement the feature XXX which is the perfect candidate to be a new service”.</p>
+<p>(8) <strong>Work with a PO that is an expert on the domain that you are working on”.</strong><br>The main risk when extracting pieces of logic is that you break one strange, undocumented and forgotten use case. So for this try to go step by step, using all your testing arsenal and validate every single use case migrated with your PO.<br>For the case that you are not splitting but instead just adding new functionality as services, please read the following sections.</p>
+<h3 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h3><p>I called this section value not because the previous two didn’t added value but because we use to think (and that is great) that by taking a slice of the entire stack we will “generate more value”.<br>In this case the aim would be to split logic and data at the same time.<br>Although in the vast majority of the cases this is the selected strategy, it is not necessarily the easier to implement.</p>
+<p>(9) <strong>The way of working while doing maintenance generally is not the same as when developing new software.</strong><br>We all agree that the focus is add business value, but in incremental steps that are achivables. I would strongly recommend to double check if this is the best approach.<br>Sometimes this strategy is selected not because it is the one that align best with the business needs, but rather because it is the most challenging one from the technical point of view, or because it is the one more close to the final “solution”.</p>
+<p>If you conclude this is the right approach, make sure that you know your infrastructure. To split the data, perhaps using different schemas would be enough (with SQL Server), or different credentials to connect to the DB with different access rights. To split the logic using a clone instance of the current one maybe is a valid solution.<br>Im proposing these silly solutions because in this case engineers tend to go wild, creating reusable components, using cloud providers, move to dockers, etc. etc. Those not necessarily are bad solutions, if the organization is aligned and aiming to go in that direction.</p>
+<h2 id="Migration-vs-Extension"><a href="#Migration-vs-Extension" class="headerlink" title="Migration vs Extension"></a>Migration vs Extension</h2><p>The famous question, should we refactor our current monolithic or only create new services for new functionalities?</p>
+<p>Clearly I cannot answer that question for you, however we must agree on the following:</p>
+<ul>
+<li><p>Whateverr is your answer, you will need to touch the code base of your monolithic. Your current application wont start interacting with a new service/s automagically. (Yes, this assumption happens and generates lot of discussions between directors and developers).</p>
+</li>
+<li><p>If you are analyzing going to microservices chances are that you are facing some problems with your current code base. So, is extension-only a realistic solution?</p>
+</li>
+</ul>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>To finanlize this post I would like to list some points that I think are important.</p>
+<ul>
+<li>Although not metioned before I encourage you to give it a look at Domain Driven Design. I can be very beneficial as a tool to split your monolithic application.</li>
+<li>Handle team and stakeholders expectations. When new projects start everybody around gets super excited.</li>
+<li>Try, at the beginning, to forget about timelines. One sprint at a time.</li>
+<li>Do your best to deliver small increments.</li>
+<li>The fact that one approach worked for one problem does not mean it will work for all your use cases.</li>
+</ul>
+<p>I hope that you have enjoyed reading it as much as I did writing it.<br>Feel free to leave your comments below.</p>
 
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Counting elements!<br>It is interesting to observe how something that seems to be harmless can be really intriguing as counting elements.</p>
-<h1 id="Lesson-04-a-PermCheck"><a href="#Lesson-04-a-PermCheck" class="headerlink" title="Lesson 04-a: PermCheck"></a>Lesson 04-a: PermCheck</h1><p>Problem URL: <a href="https://codility.com/programmers/task/perm_check/" target="_blank" rel="noopener">https://codility.com/programmers/task/perm_check/</a><br>Exercise URL: <a href="https://codility.com/demo/take-sample-test/perm_check/" target="_blank" rel="noopener">https://codility.com/demo/take-sample-test/perm_check/</a></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>One “relaxing” aspect of the linear restriction, not just in this particular problem but in general to time complexity, is that no one care if the final solution is O(N) or O(2N) or O(9999N) whereas it is a linear function. This does mean that you shouldn’t care about the performance, but to take note (specially if you are developing code) is that O(N) does not mean one single loop.<br>Although the problem does not say it specific we should take into account the following points; duplicated values in the input array, missing values (like #1), empty arrays and edge cases of arrays like [9999].<br>My final consideration for this problem is take present the use of auxiliary data structures. No one force us to calculate the final result without store intermediate results, particularly if you notice that the space complexity expected is O(N).<br>With all this my simple first idea was to use an auxiliary data structure to store the existence of each request value and each value is just a number we could use them as index of other array;</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span> (<span class="params">A</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> control = <span class="keyword">new</span> <span class="built_in">Array</span>(A.length);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; A.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (A[i] &gt; A.length) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		control[A[i]<span class="number">-1</span>] = <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; control.length; j++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!control[j])</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Lesson-04-b-PermCheck"><a href="#Lesson-04-b-PermCheck" class="headerlink" title="Lesson 04-b: PermCheck"></a>Lesson 04-b: PermCheck</h1><p>Problem URL: <a href="https://codility.com/programmers/task/missing_integer/" target="_blank" rel="noopener">https://codility.com/programmers/task/missing_integer/</a><br>Exercise URL: <a href="https://codility.com/demo/take-sample-test/missing_integer/" target="_blank" rel="noopener">https://codility.com/demo/take-sample-test/missing_integer/</a></p>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h2><p>I don’t think that the fact this problem comes after the previous one is a coincidence, and in fact we could use the same code structure but with a slightly different in the semantic of the auxiliary data structure (the control array). Instead of using the <strong>control</strong> array to know the present values we will use it to known the first missing one.<br>An extra consideration, in particular if we want to use the previous code, is that we will need to exclude negative values.</p>
-<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span> (<span class="params">A</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> control = <span class="keyword">new</span> <span class="built_in">Array</span>(A.length);</span><br><span class="line"></span><br><span class="line">	A = A.filter(<span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123; <span class="keyword">return</span> i &gt;=<span class="number">0</span>; &#125;);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (A.length === <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> A[<span class="number">0</span>] === <span class="number">1</span> ? <span class="number">2</span> : <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; A.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		control[A[i]<span class="number">-1</span>] = <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; control.length; j++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!control[j])</span><br><span class="line">			<span class="keyword">return</span> j+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> A.length+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Lesson-04-c-FrogRiverOne"><a href="#Lesson-04-c-FrogRiverOne" class="headerlink" title="Lesson 04-c: FrogRiverOne"></a>Lesson 04-c: FrogRiverOne</h1><p>Problem URL: <a href="https://codility.com/programmers/task/frog_river_one/" target="_blank" rel="noopener">https://codility.com/programmers/task/frog_river_one/</a><br>Exercise URL: <a href="https://codility.com/demo/take-sample-test/frog_river_one/" target="_blank" rel="noopener">https://codility.com/demo/take-sample-test/frog_river_one/</a></p>
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h2><p>A really creative problem, where the real problem is understand what is required rather finding the solution.<br>We can safely ignore the existence of a river and the measure in which leaves fall, what we need to understand how the frog move from one point to another. By jumping from one leave to the next leave (note that I did not mention the time factor). If we analyze this problem ignoring the time variable we could see that all leaves would be present when the frog needs them and in this case answering the question would be knowing the index of X in A. Besides as all leave are present the order of them does not make any sense.<br>In this case it is simple to realize that the frog will need to jump from position 1, to 2, to 3 until X, and the nice part is this is also true if the leaves are falling differed in time.<br>With this I see that our problem translate to knowing when the values from 1 to X are all present in the array A. In my case I thought as the values are number I can know it based on the sum of them. (any other way to do so would be totally valid)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span> (<span class="params">X, A</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> sum = <span class="number">0</span>,</span><br><span class="line">		saw_numbers = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//please do not this! be smart and remember (n*(n+1))/2 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> c = <span class="number">0</span>; c &lt; X; c++, sum += c);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; A.length; i++)&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (A[i] &lt;= X &amp;&amp; !saw_numbers[A[i].toString()]) &#123;</span><br><span class="line">			sum -= A[i];</span><br><span class="line">			saw_numbers[A[i].toString()] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (sum === <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">return</span> i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>I will answer the final problem of this lesson next time… I could say that it will be for the thrill…</p>
+        
+    
 
-
-
-
-
+    
 </div>
 
 
-
+                
 
                 <!-- Post Comments -->
-
-
+                
+                    
     <!-- 使用 DISQUS -->
 <div id="disqus-comment">
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://mictian.io/2016/08/15/2016-08-15-codility-lesson-4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://mictian.io/2018/07/11/2018-07-11-lessons-learned-moving-to-microservices/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -536,35 +603,35 @@
     }
 </style>
 
-
+                
             </div>
 
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
-
-        <a href="/2016/08/30/2016-08-30-codility-lesson-4/" id="post_nav-newer" class="prev-content">
+    
+        <a href="/2018/07/24/2018-07-26-working-with-jmtpfs/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Newer
         </a>
-
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
-
-        <a href="/2016/08/08/2016-08-08-codility-lesson-3/" id="post_nav-older" class="next-content">
+    
+        <a href="/2016/08/30/2016-08-30-codility-lesson-4/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
             </button>
         </a>
-
+    
 </nav>
 
         </div>
@@ -572,7 +639,7 @@
 
 
 
-
+                    
                         <!-- Overlay For Active Sidebar -->
 <div class="sidebar-overlay"></div>
 
@@ -611,39 +678,39 @@
     <!-- User dropdown  -->
     <li class="dropdown">
         <ul id="settings-dropdown" class="dropdown-menu">
-
+            
                 <li>
                     <a href="/contact" target="_blank" title="Email Me">
-
+                        
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-
+                        
                         Email Me
                     </a>
                 </li>
-
+            
         </ul>
     </li>
 
     <!-- Homepage -->
-
+    
         <li id="sidebar-first-li">
             <a href="/">
-
+                
                     <i class="material-icons sidebar-material-icons">home</i>
-
+                
                 Home
             </a>
         </li>
-
-
+        
+    
 
     <!-- Archives  -->
-
+    
         <li class="dropdown">
             <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-
+                
                     <i class="material-icons sidebar-material-icons">inbox</i>
-
+                
                     Archives
                 <b class="caret"></b>
             </a>
@@ -652,27 +719,27 @@
                 <a class="sidebar_archives-link" href="/archives/2018/07/">July 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">February 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">January 2016<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
-
-
+        
+    
 
     <!-- Categories  -->
-
+    
 
     <!-- Pages  -->
-
+    
         <li>
             <a href="/about" title="About">
-
+                
                     <i class="material-icons sidebar-material-icons">person</i>
-
+                
                 About
             </a>
         </li>
-
-
+        
+    
 
     <!-- Article Number  -->
-
+    
 </ul>
 
 
@@ -720,13 +787,13 @@ It will not impact the appearance and can give developers a lot of support :)
     </div>
 
     <!-- Sidebar Image -->
-
+    
 
 </aside>
 
+                    
 
-
-
+                    
                         <!-- Footer Top Button -->
                         <div id="back-to-top" class="toTop-wrap">
     <a href="#top" class="toTop">
@@ -734,76 +801,76 @@ It will not impact the appearance and can give developers a lot of support :)
     </a>
 </div>
 
-
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
-
+    
         <!-- Paradox Footer Left Section -->
         <div class="mdl-mini-footer--left-section sns-list">
     <!-- Twitter -->
-
+    
 
     <!-- Facebook -->
-
+    
 
     <!-- Google + -->
-
+    
 
     <!-- Weibo -->
-
+    
 
     <!-- Instagram -->
-
+    
 
     <!-- Tumblr -->
-
+    
 
     <!-- Github -->
-
+    
         <a href="https://github.com/mictian" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
                 <span class="visuallyhidden">Github</span>
             </button><!--
      --></a>
-
+    
 
     <!-- LinkedIn -->
-
+    
         <a href="https://www.linkedin.com/in/santiagomachado/uy" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
                 <span class="visuallyhidden">LinkedIn</span>
             </button><!--
      --></a>
-
+    
 
     <!-- RSS -->
-
+    
         <a href="/atom.xml" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-rss">
                 <span class="visuallyhidden">RSS</span>
             </button><!--
      --></a>
-
+    
 
     <!-- Zhihu -->
-
+    
 
     <!-- Bilibili -->
-
+    
 
     <!-- Telegram -->
-
-
+    
+    
     <!-- V2EX -->
-
+    
 </div>
 
 
         <!--Copyright-->
         <div id="copyright">
             Copyright&nbsp;©&nbsp;2015&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Mictian Blog
-
+            
         </div>
 
         <!-- Paradox Footer Right Section -->
@@ -822,7 +889,7 @@ It will not impact the appearance and can give developers a lot of support :)
                 <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
             </div>
         </div>
-
+    
 </footer>
 
 
@@ -896,8 +963,8 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
-
-
+    
+    
 </script>
 
 <!-- MathJax Load-->
@@ -941,5 +1008,5 @@ console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viose
                 </main>
             </div>
         </body>
-
+    
 </html>
