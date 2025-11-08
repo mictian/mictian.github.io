@@ -97,3 +97,5 @@ deploy:
   type: git
   repo: git@github.com:mictian/mictian.github.io.git
   branch: master
+  name: Mictian
+  email: mictian@users.noreply.github.com
