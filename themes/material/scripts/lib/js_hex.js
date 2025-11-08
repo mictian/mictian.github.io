@@ -1,7 +1,7 @@
 'use strict';
 
-var path_for = require("./path_for");
-var get_file_hex = require("./get_file_hex");
+var pathLib = require('path');
+var fs = require('fs');
 
 function jsHelper() {
   var result = '';
@@ -16,7 +16,21 @@ function jsHelper() {
       result += jsHelper.apply(this, path);
     } else {
       if (path.indexOf('?') < 0 && path.substring(path.length - 3, path.length) !== '.js') path += '.js';
-      result += '<script src="' + require("../../../../node_modules/hexo/lib/plugins/helper/url_for").call(this,path) + '?' + get_file_hex(path_for.call(this,path)) + '"></script>';
+      
+      // Get file hash for cache busting
+      var hash = '';
+      try {
+        var publicPath = pathLib.join(this.env.public_dir, path);
+        if (fs.existsSync(publicPath)) {
+          var crypto = require('crypto');
+          var content = fs.readFileSync(publicPath);
+          hash = crypto.createHash('md5').update(content).digest('hex').substring(0, 8);
+        }
+      } catch(e) {
+        hash = Date.now(); // Fallback to timestamp
+      }
+      
+      result += '<script src="' + this.url_for(path) + '?' + hash + '"></script>';
     }
   }
 

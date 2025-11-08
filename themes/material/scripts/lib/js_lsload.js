@@ -1,7 +1,6 @@
 'use strict';
 
-var path_for = require("./path_for");
-var get_file_hex = require("./get_file_hex");
+var pathLib = require('path');
 var fs = require('fs');
 
 function jsHelper() {
@@ -25,10 +24,22 @@ function jsHelper() {
       result += jsHelper.apply(this, path);
     } else {
       if (path.indexOf('?') < 0 && path.substring(path.length - 3, path.length) !== '.js') path += '.js';
-      var localpath = path_for.call(this,path);
+      
+      // Get file hash for cache busting
+      var hash = '';
+      try {
+        var publicPath = pathLib.join(this.env.public_dir, path);
+        if (fs.existsSync(publicPath)) {
+          var crypto = require('crypto');
+          var content = fs.readFileSync(publicPath);
+          hash = '?' + crypto.createHash('md5').update(content).digest('hex').substring(0, 8);
+        }
+      } catch(e) {
+        // Ignore errors, just don't add hash
+      }
+      
       result += '<script>lsloader.load("' + key + '","' +
-        require("../../../../node_modules/hexo/lib/plugins/helper/url_for").call(this,path) +
-        (fs.existsSync(localpath)?'?' + get_file_hex(localpath):'') + '", true)</script>'
+        this.url_for(path) + hash + '", true)</script>'
     }
   }
   return result;
